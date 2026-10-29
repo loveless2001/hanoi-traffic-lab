@@ -1,5 +1,14 @@
 [
   {
+    "id": "OSM_RR3",
+    "url": "https://download.geofabrik.de/asia/vietnam-261027.osm.pbf",
+    "metadata_url": "https://download.geofabrik.de/asia/vietnam.html",
+    "type": "crowdsourced_regional_network",
+    "timestamp": "2026-10-27T21:23:59Z",
+    "used": "Extended envelope covering inside Ring Road 3 plus buffer; actual road geometry and topology, one-way and vehicle-access tags. Not official traffic counts, legal-turn inventory or signal timing.",
+    "provenance": "data/rr3_provenance.json"
+  },
+  {
     "id": "OSM",
     "url": "https://api.openstreetmap.org/api/0.6/map?bbox=105.800,21.010,105.832,21.032",
     "type": "crowdsourced_network",

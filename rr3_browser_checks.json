@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "errors": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:8766/regions/inside-ring3.json.gz?v=20261027-2",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:8766/regions/inside-ring3.json.gz?v=20261027-2",
+      "status": 200
+    }
+  ],
+  "comparison": {
+    "error": "",
+    "same": true,
+    "count": 1000,
+    "usingNewRoad": 50,
+    "metrics": [
+      {
+        "t": 90000,
+        "generated": 1000,
+        "completed": 1000,
+        "base_completed": 1000,
+        "inside": 0,
+        "external": 0,
+        "unfinished": 0,
+        "total_wait_veh_h": 44.29850712461007,
+        "external_wait_veh_h": 0,
+        "spillback_link_min": 0,
+        "waiting": 0,
+        "conservation_error": 0,
+        "throughput_veh_h": 40
+      },
+      {
+        "t": 90000,
+        "generated": 1000,
+        "completed": 1000,
+        "base_completed": 1000,
+        "inside": 0,
+        "external": 0,
+        "unfinished": 0,
+        "total_wait_veh_h": 42.18769521866678,
+        "external_wait_veh_h": 0,
+        "spillback_link_min": 0,
+        "waiting": 0,
+        "conservation_error": 0,
+        "throughput_veh_h": 40
+      }
+    ],
+    "design": {
+      "lines": [
+        {
+          "id": "L1",
+          "kind": "road",
+          "lanes": 2,
+          "points": [
+            {
+              "ll": [
+                105.8700309,
+                20.9552395
+              ],
+              "ref": "base:1859"
+            },
+            {
+              "ll": [
+                105.8971731,
+                20.9532305
+              ],
+              "ref": "base:63776"
+            }
+          ]
+        },
+        {
+          "id": "L2",
+          "kind": "access",
+          "lanes": 1,
+          "points": [
+            {
+              "ll": [
+                105.8834958,
+                20.9542429
+              ],
+              "ref": "design:L1"
+            },
+            {
+              "ll": [
+                105.8841945,
+                20.9547058
+              ],
+              "ref": "base:27585"
+            }
+          ]
+        }
+      ],
+      "autoConnect": false,
+      "bbox": [
+        105.74,
+        20.94,
+        106,
+        21.19
+      ]
+    },
+    "seconds": 36.47890000000596
+  },
+  "checks": [
+    "draw outside old bounds",
+    "add branch",
+    "delete / undo",
+    "paired worker simulation",
+    "cancel",
+    "independent region designs",
+    "reload persistence",
+    "mobile dark layout"
+  ],
+  "testedAt": "2026-10-29"
+}

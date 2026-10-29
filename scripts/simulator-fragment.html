@@ -1,10 +1,12 @@
 <div id="hanoi-road-compare">
   <h3>Vẽ đường · so sánh cùng nhu cầu</h3>
   <div class="text-small text-muted">Mạng OSM · dân cư WorldPop 2020 · mô phỏng thử nghiệm, chưa hiệu chỉnh thực địa</div>
+  <div class="viz-controls"><label class="form-label">Phạm vi bản đồ<select class="form-select hn-config" id="hc-region"><option value="rr3" selected>Toàn vùng trong Vành đai 3 + dải đệm</option><option value="legacy">Láng–Giảng Võ (bản cũ)</option></select></label><span class="text-small" id="hc-coverage">Đang tải bản đồ mở rộng…</span></div>
   <div class="viz-controls">
     <label class="form-label">Chuyến giả định / ngày<input class="form-control hn-config" id="hc-daily" type="number" min="1000" max="200000" step="1000" value="45000"></label>
     <label class="form-label">Phân bố thời gian<select class="form-select hn-config" id="hc-profile"><option value="commute">Hai cao điểm sáng / chiều</option><option value="flat">Đều trong 24 giờ</option><option value="morning">Tập trung buổi sáng</option><option value="custom">Tự nhập 24 trọng số</option></select></label>
     <button class="btn btn-primary" type="button" id="hc-run">So sánh hai phương án</button>
+    <button class="btn" type="button" id="hc-stop" hidden>Dừng tính</button>
   </div>
   <details id="hc-settings"><summary>Chỉnh xe máy / ô tô và phân bố theo giờ</summary>
     <div class="viz-controls"><label class="form-label">Xe máy (%)<input class="form-control hn-config" id="hc-moto" type="number" min="0" max="100" value="80"></label><label class="form-label">Hạt giống ngẫu nhiên<input class="form-control hn-config" id="hc-seed" type="number" min="1" max="999999" value="42"></label></div>
@@ -23,7 +25,8 @@
     <section class="hc-map-panel"><div class="hc-map-title"><strong>Phương án tự vẽ</strong><span class="text-small" id="hc-inventory-b">Chưa có tuyến mới</span></div><canvas class="cursor-interaction" id="hc-map-b" role="img" aria-label="Bản đồ chỉnh sửa: chọn Vẽ đường hoặc Thêm nhánh, rồi chấm điểm đầu, các điểm giữa và điểm cuối trên đường có sẵn"></canvas></section>
   </div>
   <div class="viz-row text-small hc-legend"><span><span class="hc-swatch" data-color="1"></span>Đang lưu thông</span><span><span class="hc-swatch" data-color="3"></span>Gần đầy</span><span><span class="hc-swatch" data-color="5"></span>Đường / nhánh tự vẽ</span><span>● xe máy · ■ ô tô · × spillback</span></div>
-  <div class="text-small text-muted">Dân cư: ô ~100 m · nhạt 0 → đậm ≥80.000 người/km² · giao lộ mới giả định đèn 90 giây</div>
+  <div class="text-small text-muted" id="hc-pop-description">Dân cư WorldPop 2020 · nhạt 0 → đậm ≥80.000 người/km²</div>
+  <div class="text-small text-muted">Phóng to để vẽ chi tiết · không tự nối cầu vượt/hầm · giao lộ mới giả định đèn 90 giây</div>
   <details id="hc-lines"><summary id="hc-lines-title">Các tuyến đã vẽ (0)</summary><div id="hc-line-list" class="hc-line-list"></div></details>
   <div class="viz-row hc-playback"><button class="btn" type="button" id="hc-play" disabled>Phát</button><label class="form-label">Tốc độ<select class="form-select" id="hc-speed"><option value="10">10 phút / giây</option><option value="30" selected>30 phút / giây</option><option value="90">90 phút / giây</option></select></label><strong id="hc-time">00:00</strong><button class="btn" type="button" id="hc-end" disabled>Cuối kỳ</button></div>
   <label class="sr-only" for="hc-timeline">Giờ chung của hai phương án</label><input class="form-range" id="hc-timeline" type="range" min="0" max="1500" step="1" value="0" disabled>
@@ -39,4 +42,5 @@
 <script type="application/json" id="hc-pop-data">__POPULATION_DATA__</script>
 <script>__ENGINE_CODE__</script>
 <script>__EDITOR_CODE__</script>
+<script type="text/plain" id="hc-worker-source">__WORKER_CODE__</script>
 <script>__VIEWER_CODE__</script>

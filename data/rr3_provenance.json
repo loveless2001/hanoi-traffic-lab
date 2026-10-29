@@ -1,0 +1,40 @@
+{
+  "created": "2026-10-29",
+  "bbox": [
+    105.74,
+    20.94,
+    106.0,
+    21.19
+  ],
+  "coverage": "Envelope covering inside Ring Road 3 plus a buffer, not an official boundary polygon",
+  "osm": {
+    "source_url": "https://download.geofabrik.de/asia/vietnam-261027.osm.pbf",
+    "timestamp": "2026-10-27T21:23:59Z",
+    "pbf_sha256": "43653150123dd2aea72820d4fb6018fd89369c34d4b19f20a6f6cc7620ee3421",
+    "license": "ODbL 1.0; © OpenStreetMap contributors / Geofabrik",
+    "snapshot": "rr3_osm_snapshot.json.gz",
+    "extraction": "Only in-bounds nodes and referenced drivable-road/water ways. Contributor identities removed."
+  },
+  "population": {
+    "source_url": "https://data.worldpop.org/GIS/Population/Global_2000_2020/2020/VNM/vnm_ppp_2020.tif",
+    "metadata_url": "https://hub.worldpop.org/geodata/summary?id=6449",
+    "doi": "10.5258/SOTON/WP00645",
+    "year": 2020,
+    "license": "CC BY 4.0; WorldPop/University of Southampton",
+    "original_grid": "3 arc seconds, about 100 m",
+    "display_grid": "3 × 3 source cells summed, about 300 m",
+    "clip": "rr3_worldpop_2020_clip.tif"
+  },
+  "files": [
+    {
+      "path": "rr3_osm_snapshot.json.gz",
+      "bytes": 4867483,
+      "sha256": "99cffba415445d31fb6b8b68eb92ba183427501c92e0a2e791dee370252b5ca9"
+    },
+    {
+      "path": "rr3_worldpop_2020_clip.tif",
+      "bytes": 349526,
+      "sha256": "78d27dd243ff1414b426595e45866b4518c9edf971cc212b3c8636dfd0c0f117"
+    }
+  ]
+}

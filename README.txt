@@ -1,3 +1,9 @@
+CẬP NHẬT PHẠM VI 29/10/2026
+Mặc định hiện là toàn vùng trong Vành đai 3 và dải đệm (~752 km²).
+Xem README.md, region-report.html và data/rr3_provenance.json cho nguồn và
+kiểm tra riêng. 124 thí nghiệm được mô tả bên dưới vẫn thuộc vùng nhỏ cũ.
+Mạng lớn cần mở qua HTTP/GitHub Pages, không mở tệp trực tiếp.
+
 HÀ NỘI: ĐƯỜNG MỚI, TRUY NHẬP VÀ HÀNG ĐỢI
 Ngày tạo: 29/10/2026 (Asia/Bangkok)
 

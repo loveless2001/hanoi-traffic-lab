@@ -1,0 +1,32 @@
+[
+  {
+    "name": "at grade",
+    "passed": true,
+    "connected": true
+  },
+  {
+    "name": "missing optional layer",
+    "passed": true,
+    "connected": true
+  },
+  {
+    "name": "bridge",
+    "passed": true,
+    "connected": false
+  },
+  {
+    "name": "tunnel",
+    "passed": true,
+    "connected": false
+  },
+  {
+    "name": "different layer",
+    "passed": true,
+    "connected": false
+  },
+  {
+    "name": "motorway",
+    "passed": true,
+    "connected": false
+  }
+]

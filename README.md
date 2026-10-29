@@ -2,7 +2,8 @@
 
 [Mở trình giả lập](https://loveless2001.github.io/hanoi-traffic-lab/) · [Báo cáo](https://loveless2001.github.io/hanoi-traffic-lab/report.html)
 
-Tự vẽ đường và thêm/xóa đường nhánh trên một phần mạng đường Hà Nội, rồi chạy
+Tự vẽ đường và thêm/xóa đường nhánh trên mạng đường Hà Nội phủ toàn vùng
+trong Vành đai 3 và dải đệm, rồi chạy
 hiện trạng và phương án mới với **chính xác cùng một tập chuyến đi**: cùng
 điểm đi–đến, giờ xuất phát và loại xe.
 
@@ -10,6 +11,13 @@ hiện trạng và phương án mới với **chính xác cùng một tập chuy
 và không phải dự báo giao thông Hà Nội năm 2026.
 
 ## Sử dụng
+
+Chọn **Toàn vùng trong Vành đai 3 + dải đệm** (mặc định), hoặc trở về vùng
+Láng–Giảng Võ của các thí nghiệm ban đầu. Mạng mới có 57.175 nút hình học,
+140.718 đoạn có hướng, 815 nút đèn suy ra từ OSM và 81 điểm đi–đến tổng hợp.
+Khung phủ khoảng 752 km² là diện tích cả dải đệm, không phải diện tích một
+đa giác chính thức của Vành đai 3. Phóng to để chỉnh sửa đường địa phương.
+Thiết kế của từng vùng được lưu riêng trong trình duyệt.
 
 1. Chọn **Vẽ đường** hoặc **Thêm nhánh** và vẽ ở bản đồ bên phải.
 2. Chấm điểm đầu trên đường, thêm điểm giữa trên nền, rồi chấm vào một đường
@@ -26,7 +34,13 @@ Bật nối giao cắt để giả định các giao cắt mới cùng mức, ho
 ## Chạy cục bộ và cập nhật trang
 
 Ứng dụng là trang tĩnh, không cần backend hay bước cài đặt thư viện JavaScript.
-Tệp `index.html` đã nhúng mạng đường, dân cư và D3; có thể mở trực tiếp.
+Mạng lớn được tải từ `regions/inside-ring3.json.gz` (~6,9 MB), giải nén trong
+trình duyệt; có bản JSON dự phòng cho trình duyệt không hỗ trợ giải nén.
+Hãy dùng máy chủ HTTP bên dưới hoặc GitHub Pages. Khi mở trực tiếp tệp HTML,
+có thể dùng vùng Láng–Giảng Võ nhúng sẵn; mạng lớn cần được tải qua HTTP.
+Phần mô phỏng chạy trong Web Worker, có nút **Dừng tính**; hai bản đồ vẫn kéo
+và phóng được trong khi tính toán. Vùng lớn có thể mất vài chục giây đến vài
+phút tùy thiết bị, số chuyến và phương án.
 
 ```sh
 python -m http.server 8765 --bind 127.0.0.1
@@ -52,6 +66,11 @@ Commit và push `main` để GitHub Pages cập nhật từ thư mục gốc c�
 | `viewer.js` | Giao diện vẽ đường, bản đồ và so sánh đồng bộ |
 | `editor.js` | Chia cạnh tại điểm nối, dựng giao lộ, tính lại đường đi |
 | `engine.js` | Động cơ hàng đợi hữu hạn, hai loại xe |
+| `simulation-worker.js` | Chạy cặp mô phỏng ngoài luồng giao diện |
+| `regions/inside-ring3.json`, `.json.gz` | Mạng mở rộng, lớp dân cư ~300 m, nước và điểm đi–đến |
+| `data/rr3_*` | Snapshot OSM, raster dân cư gốc đã cắt, nguồn và hàm băm |
+| `scripts/build_rr3.py` | Dựng lại mạng lớn và cộng dân cư 3×3 ô |
+| `region-report.html`, `rr3_model_checks.json` | Giả định và kiểm tra riêng cho vùng lớn |
 | `simulation.py`, `experiment.py` | Bộ thí nghiệm Python và 124 trường hợp khảo sát |
 | `scripts/simulator-fragment.html` | Mẫu giao diện và các nhãn điều khiển |
 | `scripts/build_site.py` | Dựng trang tĩnh từ mã nguồn và dữ liệu |
@@ -60,6 +79,35 @@ Commit và push `main` để GitHub Pages cập nhật từ thư mục gốc c�
 | `report.html`, `sources.json` | Phương pháp, kết quả, giả định và nguồn |
 
 ## Kiểm định và tái lập
+
+Đọc [phương pháp vùng mở rộng](https://loveless2001.github.io/hanoi-traffic-lab/region-report.html).
+Mạng lớn lấy từ snapshot Geofabrik/OSM 27/10/2026. Chặn xe máy trên motorway
+và cạnh có thẻ cấm tương ứng; không tự nối giao cắt mới với cầu/hầm, layer
+khác 0 hoặc motorway. Nhánh và điểm nối do người dùng chọn vẫn tạo kết nối
+thật trong đồ thị. Chưa có đầy đủ cấm rẽ và hạn chế phụ thuộc thời gian.
+Nhu cầu 45.000 chuyến, tỷ lệ xe máy 80%, tốc độ, dung tích và chu kỳ đèn đều
+là giả định, không phải số đo của toàn Hà Nội. Dân cư 2020 chỉ dùng cho lớp
+hiển thị và trọng số điểm đi; điểm đến còn ngẫu nhiên, chưa có OD thực địa.
+
+124 thí nghiệm và các khoảng tin cậy trong báo cáo cũ chỉ thuộc vùng nhỏ
+8,15 km²; không được áp các kết luận đó sang vùng lớn. Chạy kiểm tra vùng mới:
+
+```sh
+node check_rr3.cjs
+```
+
+Kiểm tra này dùng 45.000 chuyến cho hiện trạng và phương án đường + nhánh
+ngoài vùng cũ, đối chiếu bảo toàn xe, dung tích hữu hạn, định tuyến theo loại
+xe và bộ lập lịch nhanh với quét toàn mạng. `rr3_model_checks.json` lưu kết quả.
+Dựng lại dữ liệu đã đóng gói (cần Python, networkx, numpy, rasterio):
+
+```sh
+python scripts/build_rr3.py --source data/rr3_osm_snapshot.json.gz --population data/rr3_worldpop_2020_clip.tif
+python scripts/build_site.py
+```
+
+`scripts/extract_rr3.py` (cần osmium) có thể trích lại snapshot từ PBF Vietnam
+đúng ngày; URL và SHA-256 của PBF nằm trong `data/rr3_provenance.json`.
 
 13 kiểm tra mạng tự vẽ: định tuyến, đường mới được sử dụng, xóa nhánh, bảo toàn
 xe, dung tích hữu hạn, giữ nguyên offset của nút không thay đổi và cùng nhu cầu.
@@ -78,6 +126,8 @@ Các kiểm tra triển khai không thay thế hiệu chỉnh và kiểm định
 
 - [OpenStreetMap contributors](https://www.openstreetmap.org/copyright): hình học,
   kết nối và đường một chiều; dữ liệu và cơ sở dữ liệu dẫn xuất theo ODbL.
+- [Geofabrik Vietnam](https://download.geofabrik.de/asia/vietnam.html): nguồn
+  PBF cho vùng mở rộng, snapshot 27/10/2026 21:23:59 UTC.
 - [WorldPop 2020](https://hub.worldpop.org/geodata/summary?id=6449): ước tính dân cư
   khoảng 100 m; CC BY 4.0. Không phải dân số đo đạc năm 2026.
 - [JICA BRT Hà Nội 2016](https://openjicareport.jica.go.jp/pdf/12266391_02.pdf):

@@ -1,7 +1,7 @@
 // Same trips, two dynamically routed networks. Usage:
-// node run_comparison.cjs design.json settings.json paired_result.json
+// node run_comparison.cjs design.json settings.json paired_result.json [regions/inside-ring3.json]
 const fs=require('fs'),path=require('path'),H=require('./engine.js'),E=require('./editor.js'),P=__dirname;
-const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),data=read(path.join(P,'ui_data.json')),pop=read(path.join(P,'population.json')),design=read(process.argv[2]||path.join(P,'editor_example_design.json')),requested=read(process.argv[3]||path.join(P,'daily_config.json'));
+const read=p=>JSON.parse(fs.readFileSync(p,'utf8')),data=read(process.argv[5]||path.join(P,'ui_data.json')),pop=data.population||read(path.join(P,'population.json')),design=read(process.argv[2]||path.join(P,'editor_example_design.json')),requested=read(process.argv[3]||path.join(P,'daily_config.json'));
 const options={...requested,scenario:'S0',induction:0};if(!Number.isInteger(options.daily)||options.daily<1||options.profile.length!==24||options.profile.some(x=>!Number.isFinite(x)||x<0)||options.profile.reduce((s,x)=>s+x,0)<=0)throw Error('Invalid daily count / 24-hour profile.');
 const trips=H.generate(data,options,pop),nets=[E.buildNetwork(data,{lines:[],autoConnect:true}),E.buildNetwork(data,design)],engines=nets.map(net=>new H.Engine(data,'CUSTOM',trips,{networkOverride:net,pathsOverride:E.routeTrips(net,trips),horizon:90000}));engines.forEach(e=>e.snapshot());while(engines[0].step()){engines[1].step();if(engines[0].stepNumber%30===0)engines.forEach(e=>e.snapshot());}
 const metrics=engines.map(e=>e.metrics()),delta={};for(const k of ['completed','total_wait_veh_h','spillback_link_min','unfinished','throughput_veh_h','external_wait_veh_h'])delta[k]=metrics[1][k]-metrics[0][k];

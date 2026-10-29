@@ -1,0 +1,302 @@
+{
+  "calibrated": false,
+  "options": {
+    "daily": 45000,
+    "motoShare": 0.8,
+    "seed": 42,
+    "profile": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      5,
+      9,
+      8,
+      5,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      8,
+      10,
+      8,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "populationWeighted": true,
+    "scenario": "S0",
+    "induction": 0
+  },
+  "tripCount": 45000,
+  "fingerprint": "ec318b36",
+  "metrics": [
+    {
+      "t": 90000,
+      "generated": 45000,
+      "completed": 45000,
+      "base_completed": 45000,
+      "inside": 0,
+      "external": 0,
+      "unfinished": 0,
+      "total_wait_veh_h": 2275.056148367145,
+      "external_wait_veh_h": 0.20991516616816322,
+      "spillback_link_min": 1379.5,
+      "waiting": 0,
+      "conservation_error": 0,
+      "throughput_veh_h": 1800
+    },
+    {
+      "t": 90000,
+      "generated": 45000,
+      "completed": 45000,
+      "base_completed": 45000,
+      "inside": 0,
+      "external": 0,
+      "unfinished": 0,
+      "total_wait_veh_h": 2083.3069490388034,
+      "external_wait_veh_h": 0.3599799525686022,
+      "spillback_link_min": 734.1666666666666,
+      "waiting": 0,
+      "conservation_error": 0,
+      "throughput_veh_h": 1800
+    }
+  ],
+  "seconds": 184.603,
+  "checks": [
+    {
+      "name": "Extended coverage includes all sides beyond legacy window",
+      "passed": true,
+      "detail": [
+        105.74,
+        20.94,
+        106,
+        21.19
+      ]
+    },
+    {
+      "name": "Detailed local roads and larger OD coverage retained",
+      "passed": true,
+      "detail": {
+        "nodes": 57175,
+        "directed_links": 140718,
+        "junctions": 42176,
+        "signals": 815,
+        "directed_km": 12942.41,
+        "portals": 81,
+        "classes": {
+          "secondary": 6766,
+          "tertiary": 14080,
+          "primary": 6198,
+          "residential": 107116,
+          "motorway": 222,
+          "trunk_link": 448,
+          "primary_link": 1096,
+          "secondary_link": 623,
+          "trunk": 1684,
+          "tertiary_link": 387,
+          "unclassified": 1865,
+          "living_street": 36,
+          "motorway_link": 197
+        },
+        "moto_prohibited_links": 574,
+        "bbox": [
+          105.74,
+          20.94,
+          106,
+          21.19
+        ],
+        "approx_bbox_km2": 751.9,
+        "population_cells": 10465
+      }
+    },
+    {
+      "name": "Population display uses 3x3 sums of original cells",
+      "passed": true,
+      "detail": {
+        "cells": 10465
+      }
+    },
+    {
+      "name": "Every generated OD is routable and modes obey restrictions",
+      "passed": true,
+      "detail": {
+        "trips": 45000,
+        "motorwayLinks": 419
+      }
+    },
+    {
+      "name": "Roads and branches can be drawn beyond legacy bounds",
+      "passed": true,
+      "detail": {
+        "design": {
+          "bbox": [
+            105.74,
+            20.94,
+            106,
+            21.19
+          ],
+          "autoConnect": false,
+          "lines": [
+            {
+              "id": "L1",
+              "kind": "road",
+              "lanes": 2,
+              "points": [
+                {
+                  "ll": [
+                    105.8700689,
+                    20.9551851
+                  ],
+                  "ref": "base:1859"
+                },
+                {
+                  "ll": [
+                    105.8972329,
+                    20.953232
+                  ],
+                  "ref": "base:63774"
+                }
+              ]
+            },
+            {
+              "id": "L2",
+              "kind": "access",
+              "lanes": 1,
+              "points": [
+                {
+                  "ll": [
+                    105.8836509,
+                    20.95420855
+                  ],
+                  "ref": "design:L1"
+                },
+                {
+                  "ll": [
+                    105.88424904621243,
+                    20.95463983244986
+                  ],
+                  "ref": "base:27585"
+                }
+              ]
+            }
+          ]
+        },
+        "inventory": {
+          "roads": 1,
+          "branches": 1,
+          "addedKm": 2.909551903260134,
+          "junctions": 4
+        }
+      }
+    },
+    {
+      "name": "Automatic crossings add explicit intersections",
+      "passed": true,
+      "detail": {
+        "automatic": 8,
+        "endpoints": 4
+      }
+    },
+    {
+      "name": "Original road length survives splitting",
+      "passed": true,
+      "detail": {
+        "originalLength": 12942408.855000172,
+        "retainedLength": 12942408.855000306
+      }
+    },
+    {
+      "name": "Branch deletion and parent cascade remain valid",
+      "passed": true
+    },
+    {
+      "name": "New topology is used in actual routes",
+      "passed": true,
+      "detail": {
+        "tripsUsingAddedRoad": 1789
+      }
+    },
+    {
+      "name": "Paired demand, conservation and finite storage on extended network",
+      "passed": true,
+      "detail": {
+        "metrics": [
+          {
+            "t": 90000,
+            "generated": 45000,
+            "completed": 45000,
+            "base_completed": 45000,
+            "inside": 0,
+            "external": 0,
+            "unfinished": 0,
+            "total_wait_veh_h": 2275.056148367145,
+            "external_wait_veh_h": 0.20991516616816322,
+            "spillback_link_min": 1379.5,
+            "waiting": 0,
+            "conservation_error": 0,
+            "throughput_veh_h": 1800
+          },
+          {
+            "t": 90000,
+            "generated": 45000,
+            "completed": 45000,
+            "base_completed": 45000,
+            "inside": 0,
+            "external": 0,
+            "unfinished": 0,
+            "total_wait_veh_h": 2083.3069490388034,
+            "external_wait_veh_h": 0.3599799525686022,
+            "spillback_link_min": 734.1666666666666,
+            "waiting": 0,
+            "conservation_error": 0,
+            "throughput_veh_h": 1800
+          }
+        ],
+        "maxStorageRatio": 0.9985838265732232
+      }
+    },
+    {
+      "name": "Wake scheduler matches exhaustive scanning on full region",
+      "passed": true,
+      "detail": {
+        "scan": {
+          "t": 1800,
+          "generated": 80,
+          "completed": 21,
+          "base_completed": 21,
+          "inside": 59,
+          "external": 0,
+          "unfinished": 59,
+          "total_wait_veh_h": 2.3749379395157106,
+          "external_wait_veh_h": 0,
+          "spillback_link_min": 0.6,
+          "waiting": 5,
+          "conservation_error": 0,
+          "throughput_veh_h": 42
+        },
+        "wake": {
+          "t": 1800,
+          "generated": 80,
+          "completed": 21,
+          "base_completed": 21,
+          "inside": 59,
+          "external": 0,
+          "unfinished": 59,
+          "total_wait_veh_h": 2.3749379395157106,
+          "external_wait_veh_h": 0,
+          "spillback_link_min": 0.6,
+          "waiting": 5,
+          "conservation_error": 0,
+          "throughput_veh_h": 42
+        }
+      }
+    }
+  ]
+}

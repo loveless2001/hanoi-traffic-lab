@@ -4,6 +4,8 @@ ROOT=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser();parser.add_argument('--model-dir',type=Path,default=ROOT);parser.add_argument('--fragment',type=Path,default=ROOT/'scripts/simulator-fragment.html');parser.add_argument('--d3',type=Path,default=ROOT/'vendor/d3.min.js');parser.add_argument('--inline-path',type=Path,default=ROOT/'work/preview-fragment.html');args=parser.parse_args();P=args.model_dir
 frag=args.fragment.read_text(encoding='utf-8')
 for key,p in [('__NETWORK_DATA__',P/'ui_data.json'),('__POPULATION_DATA__',P/'population.json'),('__ENGINE_CODE__',P/'engine.js'),('__EDITOR_CODE__',P/'editor.js'),('__VIEWER_CODE__',P/'viewer.js')]:frag=frag.replace(key,p.read_text(encoding='utf-8').replace('</script',r'<\/script'))
+worker='\n'.join((P/name).read_text(encoding='utf-8') for name in ['engine.js','editor.js','simulation-worker.js'])
+frag=frag.replace('__WORKER_CODE__',worker.replace('</script',r'<\/script'))
 dest=args.inline_path
 dest.parent.mkdir(parents=True,exist_ok=True)
 fragment='<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>\n'+frag
@@ -15,13 +17,14 @@ style='''
 d3=args.d3.read_text(encoding='utf-8')
 style+='main{max-width:1280px}.table{width:100%;border-collapse:collapse;margin:14px 0}.table th,.table td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top}.table caption{text-align:left;color:var(--muted-foreground);margin-bottom:5px}.text-end{text-align:right;font-variant-numeric:tabular-nums}.table-responsive{overflow-x:auto}button[aria-pressed="true"]{background:var(--foreground);color:var(--background)}'
 storage='''<script>try{window.openai=window.openai||{widgetState:JSON.parse(localStorage.getItem('hanoi-road-compare')||'null'),setWidgetState:async s=>{localStorage.setItem('hanoi-road-compare',JSON.stringify(s));}};}catch(e){}</script>'''
-standalone='<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hà Nội · vẽ đường và so sánh</title><style>'+style+'</style><main><script>'+d3+'</script>'+storage+frag+'<footer>Thử nghiệm trên một phần mạng Hà Nội, chưa hiệu chỉnh thực địa. Vẽ tại bản đồ phải: chấm lên một đường để đặt điểm đầu, chấm trên nền để thêm điểm giữa, chấm vào đường để kết thúc. Xóa đường sẽ xóa cả nhánh phụ thuộc; Hoàn tác để khôi phục. Hai phương án dùng chính xác cùng tập chuyến, không phát sinh thêm nhu cầu; đường đi và xung đột được tính lại cho mạng tự vẽ. Tắt nối giao cắt để chỉ nối các đầu tuyến đã chọn. Pha đèn mới, khả năng len làn và tính khả thi xây dựng vẫn là giả định.<br><a href="report.html">Báo cáo và kiểm định</a> · <a href="https://www.openstreetmap.org/copyright">OSM / ODbL</a> · <a href="https://hub.worldpop.org/geodata/summary?id=6449">WorldPop 2020 / CC BY 4.0</a></footer></main></html>'
+standalone='<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hà Nội · vẽ đường và so sánh</title><style>'+style+'</style><main><script>'+d3+'</script>'+storage+frag+'<footer>Mạng mở rộng phủ vùng trong Vành đai 3 và dải đệm; có thể chọn lại vùng Láng–Giảng Võ. Đây là mô phỏng thử nghiệm chưa hiệu chỉnh thực địa. Vẽ tại bản đồ phải: chấm lên một đường để đặt điểm đầu, chấm trên nền để thêm điểm giữa, chấm vào đường để kết thúc. Xóa đường sẽ xóa cả nhánh phụ thuộc; Hoàn tác để khôi phục. Hai phương án dùng chính xác cùng tập chuyến, không phát sinh thêm nhu cầu; đường đi và xung đột được tính lại cho mạng tự vẽ. Tắt nối giao cắt để chỉ nối các đầu tuyến đã chọn. Pha đèn mới, khả năng len làn và tính khả thi xây dựng vẫn là giả định.<br><a href="region-report.html">Dữ liệu và kiểm tra vùng mở rộng</a> · <a href="report.html">Thí nghiệm vùng nhỏ</a> · <a href="https://www.openstreetmap.org/copyright">OSM / ODbL</a> · <a href="https://hub.worldpop.org/geodata/summary?id=6449">WorldPop 2020 / CC BY 4.0</a></footer></main></html>'
 (P/'index.html').write_text(standalone,encoding='utf-8');(P/'simulator.html').write_text(standalone,encoding='utf-8')
-import hashlib
+import hashlib,runpy
+if (P/'regions/inside-ring3-stats.json').exists():runpy.run_path(str(ROOT/'scripts/build_rr3_report.py'),run_name='__main__')
 public_files=[p for p in sorted(P.rglob('*')) if p.is_file() and not any(x in p.relative_to(P).parts for x in ['.git','work','__pycache__']) and p.name!='manifest.json']
 def published_bytes(p):
     raw=p.read_bytes()
-    return raw if p.suffix.lower() in ['.png','.tif','.pdf'] else raw.replace(b'\r\n',b'\n')
+    return raw if p.suffix.lower() in ['.png','.tif','.pdf','.gz'] else raw.replace(b'\r\n',b'\n')
 manifest=dict(created='2026-10-29',calibrated=False,experiment_runs=124,text_line_endings='LF, as published by Git',files=[dict(path=p.relative_to(P).as_posix(),bytes=len(published_bytes(p)),sha256=hashlib.sha256(published_bytes(p)).hexdigest()) for p in public_files])
 (P/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
 print('Built index.html, simulator.html and public manifest; site bytes',(P/'index.html').stat().st_size)

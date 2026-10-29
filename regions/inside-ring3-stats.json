@@ -1,0 +1,32 @@
+{
+  "nodes": 57175,
+  "directed_links": 140718,
+  "junctions": 42176,
+  "signals": 815,
+  "directed_km": 12942.41,
+  "portals": 81,
+  "classes": {
+    "secondary": 6766,
+    "tertiary": 14080,
+    "primary": 6198,
+    "residential": 107116,
+    "motorway": 222,
+    "trunk_link": 448,
+    "primary_link": 1096,
+    "secondary_link": 623,
+    "trunk": 1684,
+    "tertiary_link": 387,
+    "unclassified": 1865,
+    "living_street": 36,
+    "motorway_link": 197
+  },
+  "moto_prohibited_links": 574,
+  "bbox": [
+    105.74,
+    20.94,
+    106.0,
+    21.19
+  ],
+  "approx_bbox_km2": 751.9,
+  "population_cells": 10465
+}

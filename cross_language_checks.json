@@ -5,7 +5,7 @@
       "completed": 0,
       "base_completed": 0,
       "unfinished": 0,
-      "total_wait_veh_h": 5.229594535194337e-12,
+      "total_wait_veh_h": 6.59383658785373e-12,
       "external_wait_veh_h": 5.684341886080802e-14,
       "spillback_link_min": 0
     }
@@ -27,7 +27,7 @@
       "completed": 0,
       "base_completed": 0,
       "unfinished": 0,
-      "total_wait_veh_h": -9.094947017729282e-12,
+      "total_wait_veh_h": 5.4569682106375694e-12,
       "external_wait_veh_h": 2.2737367544323206e-13,
       "spillback_link_min": 0
     }
