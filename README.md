@@ -19,6 +19,28 @@ Khung phủ khoảng 752 km² là diện tích cả dải đệm, không phải 
 đa giác chính thức của Vành đai 3. Phóng to để chỉnh sửa đường địa phương.
 Thiết kế của từng vùng được lưu riêng trong trình duyệt.
 
+**Chi tiết đường** mặc định là **Ẩn đường ngõ**: ẩn residential, living_street
+và unclassified theo phân loại OSM; **Chỉ trục chính** ẩn thêm tertiary;
+**Hiện tất cả** khôi phục toàn mạng trên bản đồ. Các đường nối `_link` của
+nhóm được chọn vẫn hiện, cùng mọi đường/nhánh tự vẽ. Đây là bộ lọc hiển thị,
+không xác định chính xác bề rộng đường ngoài thực tế. Không bắt điểm vẽ vào
+đường đang ẩn.
+
+**Chỉ mô phỏng đường đang hiện** mặc định được bật: loại đường bị ẩn cũng bị
+loại khỏi mạng tính toán. Đổi bộ lọc cần chạy lại. Tập chuyến gốc giữ nguyên
+số lượng, giờ xuất phát, loại xe và điểm địa lý. Những điểm đi–đến nằm ngoài
+mạng còn lại được đưa tới các nút gần nhất, khác nhau, trong vùng liên thông
+cho cả ô tô/xe máy của **hiện trạng sau lọc**. Phép gán này chỉ làm một lần,
+dùng chung cho cả hai phương án; không tạo OD riêng để ưu ái đường mới.
+Khoảng dịch điểm lớn nhất được ghi ở dòng kết quả. Chặng từ nhà/ngõ đến đường
+chính không được mô phỏng, nên đây là thí nghiệm trên mạng trục, không phải
+dự báo tác động đóng ngõ. Đường tự vẽ vẫn được giữ, nhưng một tuyến chỉ nối
+với các ngõ đã bỏ có thể không được xe sử dụng.
+
+Bỏ chọn **Chỉ mô phỏng đường đang hiện** để dùng bộ lọc như một lớp hiển thị:
+mô phỏng vẫn dùng toàn mạng và đổi bộ lọc không xóa kết quả đang xem. Lựa chọn
+được đồng bộ giữa hai bản đồ và lưu trong trình duyệt.
+
 1. Chọn **Vẽ đường** hoặc **Thêm nhánh** và vẽ ở bản đồ bên phải.
 2. Chấm điểm đầu trên đường, thêm điểm giữa trên nền, rồi chấm vào một đường
    để kết thúc. Giữ Shift khi chấm để buộc tạo điểm giữa.
@@ -67,6 +89,7 @@ Commit và push `main` để GitHub Pages cập nhật từ thư mục gốc c�
 | `editor.js` | Chia cạnh tại điểm nối, dựng giao lộ, tính lại đường đi |
 | `engine.js` | Động cơ hàng đợi hữu hạn, hai loại xe |
 | `simulation-worker.js` | Chạy cặp mô phỏng ngoài luồng giao diện |
+| `network-scope.js` | Lọc lớp đường, gán điểm đi–đến dùng chung, ánh xạ xe về bản đồ |
 | `regions/inside-ring3.json`, `.json.gz` | Mạng mở rộng, lớp dân cư ~300 m, nước và điểm đi–đến |
 | `data/rr3_*` | Snapshot OSM, raster dân cư gốc đã cắt, nguồn và hàm băm |
 | `scripts/build_rr3.py` | Dựng lại mạng lớn và cộng dân cư 3×3 ô |
@@ -94,6 +117,7 @@ hiển thị và trọng số điểm đi; điểm đến còn ngẫu nhiên, ch
 
 ```sh
 node check_rr3.cjs
+node check_scope.cjs
 ```
 
 Kiểm tra này dùng 45.000 chuyến cho hiện trạng và phương án đường + nhánh

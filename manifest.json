@@ -55,6 +55,11 @@
       "sha256": "6c099ece7e6142f41965ea796d698d5867459f5f728c1bac0acd029564f18d54"
     },
     {
+      "path": "check_scope.cjs",
+      "bytes": 6381,
+      "sha256": "ed7cd578b9e8883c80dbb8549d1b1b4da1205c7b8c7c8bc46b35f357b9eb8364"
+    },
+    {
       "path": "checks.json",
       "bytes": 3618,
       "sha256": "daad713e689da42617147fb63379c309877272c0565ee66ee918ee6d1c0f5383"
@@ -146,8 +151,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 938917,
-      "sha256": "3388bf76da3f29f51bd0f5259061ac68ab01d5513181808c03d8acb9e0e2c834"
+      "bytes": 952847,
+      "sha256": "aa1ced521a256a938ccdee0f7e6c0128e9e9cddb5e4212d5d3a23e9aac22bed4"
     },
     {
       "path": "LICENSE",
@@ -163,6 +168,11 @@
       "path": "LICENSE-DATA.txt",
       "bytes": 1371,
       "sha256": "bc901deb97bd4d2971cd986fb23027ea50cd08bf4daeb51d7df1e0e8ce3bb0fd"
+    },
+    {
+      "path": "network-scope.js",
+      "bytes": 5065,
+      "sha256": "d076265bd8d114ad1ad42a793107ba24ad7cd00173fef456fcd64d203e60c665"
     },
     {
       "path": "network_base.geojson",
@@ -181,8 +191,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 507,
-      "sha256": "1bc90ce2a5a0db585d9a3f4ecf60428a3dfb9bc7f093e5bb74031d6913d134a3"
+      "bytes": 549,
+      "sha256": "f70df8bb90c4e4a70362ec839d1f3bc1891904c5de48a327d43fab056a481012"
     },
     {
       "path": "paired_example_config.json",
@@ -211,8 +221,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8514,
-      "sha256": "3a957c979bc97b103f1a7f34bd26bf31a1f23fd066eaadf8871700404c4f8bcd"
+      "bytes": 10490,
+      "sha256": "b007f28ccb8379a81b469b0fefa28ece88ab6c10904e42494af6ec9980f1a369"
     },
     {
       "path": "README.txt",
@@ -226,8 +236,8 @@
     },
     {
       "path": "region-report.html",
-      "bytes": 8347,
-      "sha256": "7aca776e123d996afaddf9230e80392e7481043342a06f6d6439da1a10ec716e"
+      "bytes": 11211,
+      "sha256": "3943997e1de0dc5545417441d261eba7cfd352cf6fe172f9c1c8a6b26fa99785"
     },
     {
       "path": "regions/inside-ring3-stats.json",
@@ -276,8 +286,8 @@
     },
     {
       "path": "run_comparison.cjs",
-      "bytes": 2051,
-      "sha256": "68afbe62080e68aa5ab2e91b11adc548f6055b5a842021673baa1f102526146b"
+      "bytes": 2232,
+      "sha256": "0044df28f7fe57cb4dc6c578d28a23c3666918e786072377aefe719e16c5b7a6"
     },
     {
       "path": "run_daily.cjs",
@@ -288,6 +298,16 @@
       "path": "scheduler_checks.json",
       "bytes": 837,
       "sha256": "dbc6362f3ba53d42d80b426863a4b48825a025edd08a365190f9f7759e969462"
+    },
+    {
+      "path": "scope_browser_checks.json",
+      "bytes": 28941,
+      "sha256": "c5edb6d4a90eb447d06d2852ffa82d516bbd48fff380ff836651a0d1dc1169cb"
+    },
+    {
+      "path": "scope_model_checks.json",
+      "bytes": 56030,
+      "sha256": "7636603213e6e51ffc578bd723449cbb0bb918b1e177cc91f38bcde773eb439a"
     },
     {
       "path": "scripts/build_network.py",
@@ -306,13 +326,13 @@
     },
     {
       "path": "scripts/build_rr3_report.py",
-      "bytes": 9184,
-      "sha256": "de9ac6ee1caad8dc73aa56fc187e9e8d7119546a1d277356f66c3f39c12ad773"
+      "bytes": 12048,
+      "sha256": "28f778b911ab4b4edfd9ee610607c5aae7e6e7c81e800d01ae23ebc2ecae37b5"
     },
     {
       "path": "scripts/build_site.py",
-      "bytes": 6499,
-      "sha256": "f18c3ccea19073c3353bf23e6361c06a790faa85a4cc417eca363e4208276d1b"
+      "bytes": 6558,
+      "sha256": "f5b372419d14bd82451ac237caf4ebbea13776173bb7aed62fa9f46269e7794f"
     },
     {
       "path": "scripts/export_ui.py",
@@ -331,13 +351,13 @@
     },
     {
       "path": "scripts/simulator-fragment.html",
-      "bytes": 8629,
-      "sha256": "34ee381d9ae805fc889324491b7c03b1005950c6c642511fadb358a83100acf3"
+      "bytes": 9358,
+      "sha256": "3fe1030544bf7667bbd9d72387862ddf5e4a86ad788c84afae6bedb0f9a5d6a4"
     },
     {
       "path": "simulation-worker.js",
-      "bytes": 1583,
-      "sha256": "e2057176a4f58cdc5ec8fd92953ed73c170f8c35f4fc5d18973a67d5ca1d74c6"
+      "bytes": 1990,
+      "sha256": "7d72b048970ca9563560f92edc3403329800ac78f4258fbce40d5b8bc6dbaf0a"
     },
     {
       "path": "simulation.py",
@@ -346,8 +366,8 @@
     },
     {
       "path": "simulator.html",
-      "bytes": 938917,
-      "sha256": "3388bf76da3f29f51bd0f5259061ac68ab01d5513181808c03d8acb9e0e2c834"
+      "bytes": 952847,
+      "sha256": "aa1ced521a256a938ccdee0f7e6c0128e9e9cddb5e4212d5d3a23e9aac22bed4"
     },
     {
       "path": "sources.json",
@@ -381,8 +401,8 @@
     },
     {
       "path": "viewer.js",
-      "bytes": 29639,
-      "sha256": "8369442c3255c03139c9eadc77983957afee5df016f99b72720657c367dbfc77"
+      "bytes": 32316,
+      "sha256": "bf05828d6d02fb4cdf698281c31da8e47c78c35478263ebf83d5b0e24e724b8b"
     }
   ]
 }

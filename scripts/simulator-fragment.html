@@ -18,7 +18,9 @@
     <button class="btn hn-tool" type="button" id="hc-undo" disabled>Hoàn tác</button><button class="btn hn-tool" type="button" id="hc-cancel" disabled>Hủy nét</button>
     <label class="form-label">Làn / chiều<select class="form-select hn-config" id="hc-lanes"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option></select></label>
   </div>
-  <div class="viz-row hc-map-options"><label class="form-check"><input class="form-check-input hn-config" id="hc-crossings" type="checkbox" checked><span class="form-check-label">Nối các giao cắt mới cùng mức</span></label><label class="form-check"><input class="form-check-input" id="hc-pop" type="checkbox" checked><span class="form-check-label">Dân cư</span></label><button class="btn" type="button" id="hc-zoom-in" aria-label="Phóng to hai bản đồ">+</button><button class="btn" type="button" id="hc-zoom-out" aria-label="Thu nhỏ hai bản đồ">−</button><button class="btn" type="button" id="hc-fit">Toàn vùng</button></div>
+  <div class="viz-row hc-map-options"><label class="form-label">Chi tiết đường<select class="form-select hn-config" id="hc-road-detail"><option value="no-small" selected>Ẩn đường ngõ</option><option value="arterial">Chỉ trục chính</option><option value="all">Hiện tất cả</option></select></label><label class="form-check"><input class="form-check-input hn-config" id="hc-crossings" type="checkbox" checked><span class="form-check-label">Nối các giao cắt mới cùng mức</span></label><label class="form-check"><input class="form-check-input" id="hc-pop" type="checkbox" checked><span class="form-check-label">Dân cư</span></label><button class="btn" type="button" id="hc-zoom-in" aria-label="Phóng to hai bản đồ">+</button><button class="btn" type="button" id="hc-zoom-out" aria-label="Thu nhỏ hai bản đồ">−</button><button class="btn" type="button" id="hc-fit">Toàn vùng</button></div>
+  <label class="form-check"><input class="form-check-input hn-config" id="hc-sim-visible" type="checkbox" checked><span class="form-check-label">Chỉ mô phỏng đường đang hiện</span></label>
+  <div class="text-small text-muted" id="hc-road-scope-note">Điểm đi–đến được chuyển lên mạng đường còn giữ lại cho cả hai phương án; đường tự vẽ luôn được tính.</div>
   <div id="hc-hint" class="text-small" aria-live="polite">Vẽ ở bản đồ bên phải; hai đầu tuyến bắt vào đường có sẵn.</div><div id="hc-error" class="text-destructive" role="alert" hidden></div>
   <div class="hc-maps">
     <section class="hc-map-panel"><div class="hc-map-title"><strong>Hiện trạng</strong><span class="text-small" id="hc-inventory-a">Mạng đường gốc</span></div><canvas id="hc-map-a" role="img" aria-label="Hiện trạng giao thông trên mạng đường gốc, đồng bộ thời gian với phương án"></canvas></section>
@@ -42,5 +44,6 @@
 <script type="application/json" id="hc-pop-data">__POPULATION_DATA__</script>
 <script>__ENGINE_CODE__</script>
 <script>__EDITOR_CODE__</script>
+<script>__SCOPE_CODE__</script>
 <script type="text/plain" id="hc-worker-source">__WORKER_CODE__</script>
 <script>__VIEWER_CODE__</script>

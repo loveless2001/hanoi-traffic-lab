@@ -8,6 +8,7 @@
     "build": "python scripts/build_site.py",
     "test": "node check_engines.cjs && node check_editor.cjs && node check_scheduler.cjs && node check_crossings.cjs",
     "test:rr3": "node check_rr3.cjs",
+    "test:scope": "node check_scope.cjs",
     "test:python": "python check_model.py",
     "serve": "python -m http.server 8765 --bind 127.0.0.1"
   }

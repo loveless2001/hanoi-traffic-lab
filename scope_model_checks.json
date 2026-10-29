@@ -1,0 +1,2015 @@
+{
+  "calibrated": false,
+  "checks": [
+    {
+      "name": "Display-only mode keeps original graph and trip objects",
+      "passed": true
+    },
+    {
+      "name": "no-small: excluded road classes absent from simulation graph",
+      "passed": true,
+      "detail": [
+        31701,
+        31707
+      ]
+    },
+    {
+      "name": "no-small: all original trips retained with departure and vehicle class",
+      "passed": true
+    },
+    {
+      "name": "no-small: baseline-only projection stays fixed for proposal",
+      "passed": true,
+      "detail": {
+        "assignments": [
+          {
+            "original": "13061473706",
+            "node": "13061473706",
+            "shiftMeters": 0
+          },
+          {
+            "original": "5684364965",
+            "node": "5684364965",
+            "shiftMeters": 0
+          },
+          {
+            "original": "4009681631",
+            "node": "4009681631",
+            "shiftMeters": 0
+          },
+          {
+            "original": "5716343287",
+            "node": "5709955295",
+            "shiftMeters": 153.21557320324862
+          },
+          {
+            "original": "3381103642",
+            "node": "3381103642",
+            "shiftMeters": 0
+          },
+          {
+            "original": "8292738818",
+            "node": "4208253927",
+            "shiftMeters": 292.20348860511575
+          },
+          {
+            "original": "2706474622",
+            "node": "8824627685",
+            "shiftMeters": 530.4412605604889
+          },
+          {
+            "original": "12056758491",
+            "node": "2733277428",
+            "shiftMeters": 336.5116897241464
+          },
+          {
+            "original": "12011957313",
+            "node": "4845772127",
+            "shiftMeters": 689.4864531011474
+          },
+          {
+            "original": "1706700670",
+            "node": "1706700670",
+            "shiftMeters": 0
+          },
+          {
+            "original": "444394907",
+            "node": "444394907",
+            "shiftMeters": 0
+          },
+          {
+            "original": "5710273585",
+            "node": "5710273585",
+            "shiftMeters": 0
+          },
+          {
+            "original": "1696156953",
+            "node": "1696156953",
+            "shiftMeters": 0
+          },
+          {
+            "original": "4224823315",
+            "node": "4845771967",
+            "shiftMeters": 147.27789854557244
+          },
+          {
+            "original": "4450091813",
+            "node": "4450091808",
+            "shiftMeters": 118.27673830893409
+          },
+          {
+            "original": "2476774468",
+            "node": "2476774468",
+            "shiftMeters": 0
+          },
+          {
+            "original": "10290603411",
+            "node": "10122900895",
+            "shiftMeters": 364.8540143194266
+          },
+          {
+            "original": "14156524870",
+            "node": "1046210099",
+            "shiftMeters": 689.8688744638348
+          },
+          {
+            "original": "5698561227",
+            "node": "5698561227",
+            "shiftMeters": 0
+          },
+          {
+            "original": "4350980207",
+            "node": "5710691045",
+            "shiftMeters": 221.15120406183703
+          },
+          {
+            "original": "2188036136",
+            "node": "2188036136",
+            "shiftMeters": 0
+          },
+          {
+            "original": "106095678",
+            "node": "106095678",
+            "shiftMeters": 0
+          },
+          {
+            "original": "1688222761",
+            "node": "1688222761",
+            "shiftMeters": 0
+          },
+          {
+            "original": "8336854377",
+            "node": "8336854378",
+            "shiftMeters": 53.03468306683774
+          },
+          {
+            "original": "8338736836",
+            "node": "8338736836",
+            "shiftMeters": 0
+          },
+          {
+            "original": "1600044810",
+            "node": "1600044651",
+            "shiftMeters": 344.6311766352545
+          },
+          {
+            "original": "5674081987",
+            "node": "5674082564",
+            "shiftMeters": 349.8744984319382
+          },
+          {
+            "original": "5690008997",
+            "node": "5690008997",
+            "shiftMeters": 0
+          },
+          {
+            "original": "13944962077",
+            "node": "13944962077",
+            "shiftMeters": 0
+          },
+          {
+            "original": "1495022762",
+            "node": "1495022762",
+            "shiftMeters": 0
+          },
+          {
+            "original": "103015212",
+            "node": "103015212",
+            "shiftMeters": 0
+          },
+          {
+            "original": "8336852352",
+            "node": "3526985811",
+            "shiftMeters": 779.5246332637604
+          },
+          {
+            "original": "9662839489",
+            "node": "1599909011",
+            "shiftMeters": 168.39201065668138
+          },
+          {
+            "original": "12298919582",
+            "node": "12298919582",
+            "shiftMeters": 0
+          },
+          {
+            "original": "5710117910",
+            "node": "5707717471",
+            "shiftMeters": 210.2256342742247
+          },
+          {
+            "original": "5671897597",
+            "node": "5671897570",
+            "shiftMeters": 178.74709056373283
+          },
+          {
+            "original": "110390716",
+            "node": "110390716",
+            "shiftMeters": 0
+          },
+          {
+            "original": "5719254643",
+            "node": "13687756060",
+            "shiftMeters": 235.97540921248546
+          },
+          {
+            "original": "2443902044",
+            "node": "2443902044",
+            "shiftMeters": 0
+          },
+          {
+            "original": "426895639",
+            "node": "426895639",
+            "shiftMeters": 0
+          },
+          {
+            "original": "8705791998",
+            "node": "6418688954",
+            "shiftMeters": 85.15923720889009
+          },
+          {
+            "original": "4123890463",
+            "node": "14206178689",
+            "shiftMeters": 56.12980586105756
+          },
+          {
+            "original": "6324000291",
+            "node": "2706511038",
+            "shiftMeters": 293.17462916323467
+          },
+          {
+            "original": "5709973345",
+            "node": "12174390985",
+            "shiftMeters": 293.20214580558644
+          },
+          {
+            "original": "5671242582",
+            "node": "4931817246",
+            "shiftMeters": 473.79470267300337
+          },
+          {
+            "original": "6017695868",
+            "node": "4844069883",
+            "shiftMeters": 1798.1792775410356
+          },
+          {
+            "original": "5719275459",
+            "node": "5716815995",
+            "shiftMeters": 368.81868709977283
+          },
+          {
+            "original": "5724580164",
+            "node": "4901273832",
+            "shiftMeters": 86.90842603568402
+          },
+          {
+            "original": "6666412758",
+            "node": "6666412758",
+            "shiftMeters": 0
+          },
+          {
+            "original": "426893920",
+            "node": "1495094484",
+            "shiftMeters": 60.36692493410656
+          },
+          {
+            "original": "8344004444",
+            "node": "8344004445",
+            "shiftMeters": 92.9469588528853
+          },
+          {
+            "original": "6324129689",
+            "node": "8340729488",
+            "shiftMeters": 418.8823078013696
+          },
+          {
+            "original": "11012544168",
+            "node": "8333452352",
+            "shiftMeters": 541.813995139475
+          },
+          {
+            "original": "8337588628",
+            "node": "4954642003",
+            "shiftMeters": 181.17662730606256
+          },
+          {
+            "original": "1893790680",
+            "node": "1893790170",
+            "shiftMeters": 641.2977518157996
+          },
+          {
+            "original": "2517198056",
+            "node": "2517177546",
+            "shiftMeters": 111.58785570123648
+          },
+          {
+            "original": "8445444818",
+            "node": "5722299661",
+            "shiftMeters": 552.4745361598123
+          },
+          {
+            "original": "5721859856",
+            "node": "5721859856",
+            "shiftMeters": 0
+          },
+          {
+            "original": "312995996",
+            "node": "6178451403",
+            "shiftMeters": 518.8949045163191
+          },
+          {
+            "original": "8342818675",
+            "node": "5686405076",
+            "shiftMeters": 113.93538114650772
+          },
+          {
+            "original": "6099548215",
+            "node": "6099548810",
+            "shiftMeters": 152.33068937348096
+          },
+          {
+            "original": "8340976768",
+            "node": "6046915665",
+            "shiftMeters": 93.28523862862765
+          },
+          {
+            "original": "14230343126",
+            "node": "14230343127",
+            "shiftMeters": 33.29434261252144
+          },
+          {
+            "original": "13310257656",
+            "node": "6397239172",
+            "shiftMeters": 389.12655032135774
+          },
+          {
+            "original": "5716676861",
+            "node": "12009091887",
+            "shiftMeters": 172.24995631349177
+          },
+          {
+            "original": "13358834491",
+            "node": "13358834491",
+            "shiftMeters": 0
+          },
+          {
+            "original": "11337817944",
+            "node": "11337817944",
+            "shiftMeters": 0
+          },
+          {
+            "original": "8816868899",
+            "node": "8816868897",
+            "shiftMeters": 18.64883827481003
+          },
+          {
+            "original": "6095474485",
+            "node": "13324564230",
+            "shiftMeters": 458.0299214079787
+          },
+          {
+            "original": "2913939722",
+            "node": "2913893302",
+            "shiftMeters": 163.45011755272546
+          },
+          {
+            "original": "6396481302",
+            "node": "8340859835",
+            "shiftMeters": 187.80176362324147
+          },
+          {
+            "original": "13179594297",
+            "node": "4194820057",
+            "shiftMeters": 85.66029775806261
+          },
+          {
+            "original": "13395177961",
+            "node": "13388854077",
+            "shiftMeters": 91.2482031877894
+          },
+          {
+            "original": "420496728",
+            "node": "420496728",
+            "shiftMeters": 0
+          },
+          {
+            "original": "9717416030",
+            "node": "10277107644",
+            "shiftMeters": 229.98813586139582
+          },
+          {
+            "original": "12123979117",
+            "node": "8342739233",
+            "shiftMeters": 394.42691491580547
+          },
+          {
+            "original": "6324287982",
+            "node": "6324287982",
+            "shiftMeters": 0
+          },
+          {
+            "original": "12365509242",
+            "node": "12365509233",
+            "shiftMeters": 261.1768797194727
+          },
+          {
+            "original": "3328043418",
+            "node": "3328043418",
+            "shiftMeters": 0
+          },
+          {
+            "original": "6079923334",
+            "node": "13277728962",
+            "shiftMeters": 144.14581152430367
+          },
+          {
+            "original": "13196942024",
+            "node": "10803721608",
+            "shiftMeters": 271.61896488463464
+          }
+        ],
+        "remappedPortals": 52,
+        "maxShiftMeters": 1798.1792775410356,
+        "meanShiftMeters": 193.81381619407665
+      }
+    },
+    {
+      "name": "no-small: new roads and branches remain routable",
+      "passed": true,
+      "detail": {
+        "usingNewRoad": 85
+      }
+    },
+    {
+      "name": "no-small: paired simulation conserves every trip and finite storage",
+      "passed": true,
+      "detail": {
+        "metrics": [
+          {
+            "t": 90000,
+            "generated": 1000,
+            "completed": 1000,
+            "base_completed": 1000,
+            "inside": 0,
+            "external": 0,
+            "unfinished": 0,
+            "total_wait_veh_h": 46.47547982971632,
+            "external_wait_veh_h": 0,
+            "spillback_link_min": 0.1,
+            "waiting": 0,
+            "conservation_error": 0,
+            "throughput_veh_h": 40
+          },
+          {
+            "t": 90000,
+            "generated": 1000,
+            "completed": 1000,
+            "base_completed": 1000,
+            "inside": 0,
+            "external": 0,
+            "unfinished": 0,
+            "total_wait_veh_h": 42.75364223285313,
+            "external_wait_veh_h": 0,
+            "spillback_link_min": 0.1,
+            "waiting": 0,
+            "conservation_error": 0,
+            "throughput_veh_h": 40
+          }
+        ],
+        "peak": 0.9090909090909091
+      }
+    },
+    {
+      "name": "no-small: traffic overlays map back to correct visible source edges",
+      "passed": true
+    },
+    {
+      "name": "no-small: routes obey road classes and vehicle restrictions",
+      "passed": true
+    },
+    {
+      "name": "arterial: excluded road classes absent from simulation graph",
+      "passed": true,
+      "detail": [
+        17234,
+        17242
+      ]
+    },
+    {
+      "name": "arterial: all original trips retained with departure and vehicle class",
+      "passed": true
+    },
+    {
+      "name": "arterial: baseline-only projection stays fixed for proposal",
+      "passed": true,
+      "detail": {
+        "assignments": [
+          {
+            "original": "13061473706",
+            "node": "13061473706",
+            "shiftMeters": 0
+          },
+          {
+            "original": "5684364965",
+            "node": "5684364965",
+            "shiftMeters": 0
+          },
+          {
+            "original": "4009681631",
+            "node": "4009681631",
+            "shiftMeters": 0
+          },
+          {
+            "original": "5716343287",
+            "node": "12556940348",
+            "shiftMeters": 394.3171958537948
+          },
+          {
+            "original": "3381103642",
+            "node": "3381103642",
+            "shiftMeters": 0
+          },
+          {
+            "original": "8292738818",
+            "node": "1009138171",
+            "shiftMeters": 1563.9554531993554
+          },
+          {
+            "original": "2706474622",
+            "node": "8824627685",
+            "shiftMeters": 530.4412605604889
+          },
+          {
+            "original": "12056758491",
+            "node": "2733277428",
+            "shiftMeters": 336.5116897241464
+          },
+          {
+            "original": "12011957313",
+            "node": "4845772127",
+            "shiftMeters": 689.4864531011474
+          },
+          {
+            "original": "1706700670",
+            "node": "1706700670",
+            "shiftMeters": 0
+          },
+          {
+            "original": "444394907",
+            "node": "444394907",
+            "shiftMeters": 0
+          },
+          {
+            "original": "5710273585",
+            "node": "1699561405",
+            "shiftMeters": 492.88586355260804
+          },
+          {
+            "original": "1696156953",
+            "node": "1696156953",
+            "shiftMeters": 0
+          },
+          {
+            "original": "4224823315",
+            "node": "4845771967",
+            "shiftMeters": 147.27789854557244
+          },
+          {
+            "original": "4450091813",
+            "node": "4450091808",
+            "shiftMeters": 118.27673830893409
+          },
+          {
+            "original": "2476774468",
+            "node": "2476774468",
+            "shiftMeters": 0
+          },
+          {
+            "original": "10290603411",
+            "node": "10122900895",
+            "shiftMeters": 364.8540143194266
+          },
+          {
+            "original": "14156524870",
+            "node": "1046210099",
+            "shiftMeters": 689.8688744638348
+          },
+          {
+            "original": "5698561227",
+            "node": "5698561227",
+            "shiftMeters": 0
+          },
+          {
+            "original": "4350980207",
+            "node": "5710691045",
+            "shiftMeters": 221.15120406183703
+          },
+          {
+            "original": "2188036136",
+            "node": "2188036136",
+            "shiftMeters": 0
+          },
+          {
+            "original": "106095678",
+            "node": "10302026141",
+            "shiftMeters": 182.37247587286848
+          },
+          {
+            "original": "1688222761",
+            "node": "1756928963",
+            "shiftMeters": 74.55170132196868
+          },
+          {
+            "original": "8336854377",
+            "node": "5498981865",
+            "shiftMeters": 284.38637717197344
+          },
+          {
+            "original": "8338736836",
+            "node": "611554963",
+            "shiftMeters": 184.55857158365782
+          },
+          {
+            "original": "1600044810",
+            "node": "6394859160",
+            "shiftMeters": 690.4970101499349
+          },
+          {
+            "original": "5674081987",
+            "node": "5674082564",
+            "shiftMeters": 349.8744984319382
+          },
+          {
+            "original": "5690008997",
+            "node": "1893246344",
+            "shiftMeters": 267.72319015169404
+          },
+          {
+            "original": "13944962077",
+            "node": "13944962077",
+            "shiftMeters": 0
+          },
+          {
+            "original": "1495022762",
+            "node": "1495022762",
+            "shiftMeters": 0
+          },
+          {
+            "original": "103015212",
+            "node": "5689588156",
+            "shiftMeters": 284.2592350883259
+          },
+          {
+            "original": "8336852352",
+            "node": "12827716920",
+            "shiftMeters": 1266.64396252854
+          },
+          {
+            "original": "9662839489",
+            "node": "1599909011",
+            "shiftMeters": 168.39201065668138
+          },
+          {
+            "original": "12298919582",
+            "node": "12298919582",
+            "shiftMeters": 0
+          },
+          {
+            "original": "5710117910",
+            "node": "5707717471",
+            "shiftMeters": 210.2256342742247
+          },
+          {
+            "original": "5671897597",
+            "node": "5671897570",
+            "shiftMeters": 178.74709056373283
+          },
+          {
+            "original": "110390716",
+            "node": "110390716",
+            "shiftMeters": 0
+          },
+          {
+            "original": "5719254643",
+            "node": "13687756060",
+            "shiftMeters": 235.97540921248546
+          },
+          {
+            "original": "2443902044",
+            "node": "6685099221",
+            "shiftMeters": 255.11623811117943
+          },
+          {
+            "original": "426895639",
+            "node": "426895639",
+            "shiftMeters": 0
+          },
+          {
+            "original": "8705791998",
+            "node": "5719106740",
+            "shiftMeters": 120.52959405888691
+          },
+          {
+            "original": "4123890463",
+            "node": "13110334621",
+            "shiftMeters": 609.7585607730323
+          },
+          {
+            "original": "6324000291",
+            "node": "7325732075",
+            "shiftMeters": 1910.3215914471054
+          },
+          {
+            "original": "5709973345",
+            "node": "13176917703",
+            "shiftMeters": 642.7847419859942
+          },
+          {
+            "original": "5671242582",
+            "node": "5681590528",
+            "shiftMeters": 2407.04745211639
+          },
+          {
+            "original": "6017695868",
+            "node": "1673142618",
+            "shiftMeters": 2124.7510720317327
+          },
+          {
+            "original": "5719275459",
+            "node": "84806255",
+            "shiftMeters": 380.2282742195795
+          },
+          {
+            "original": "5724580164",
+            "node": "4901273832",
+            "shiftMeters": 86.90842603568402
+          },
+          {
+            "original": "6666412758",
+            "node": "6601299820",
+            "shiftMeters": 76.50397858935183
+          },
+          {
+            "original": "426893920",
+            "node": "6625119955",
+            "shiftMeters": 130.0953791070232
+          },
+          {
+            "original": "8344004444",
+            "node": "8344004445",
+            "shiftMeters": 92.9469588528853
+          },
+          {
+            "original": "6324129689",
+            "node": "8340729488",
+            "shiftMeters": 418.8823078013696
+          },
+          {
+            "original": "11012544168",
+            "node": "8333452352",
+            "shiftMeters": 541.813995139475
+          },
+          {
+            "original": "8337588628",
+            "node": "8333357769",
+            "shiftMeters": 2440.40324317458
+          },
+          {
+            "original": "1893790680",
+            "node": "1893790170",
+            "shiftMeters": 641.2977518157996
+          },
+          {
+            "original": "2517198056",
+            "node": "2517177546",
+            "shiftMeters": 111.58785570123648
+          },
+          {
+            "original": "8445444818",
+            "node": "5722299661",
+            "shiftMeters": 552.4745361598123
+          },
+          {
+            "original": "5721859856",
+            "node": "11556414932",
+            "shiftMeters": 352.69694985496994
+          },
+          {
+            "original": "312995996",
+            "node": "6178451403",
+            "shiftMeters": 518.8949045163191
+          },
+          {
+            "original": "8342818675",
+            "node": "91709329",
+            "shiftMeters": 356.1582320401993
+          },
+          {
+            "original": "6099548215",
+            "node": "6099548810",
+            "shiftMeters": 152.33068937348096
+          },
+          {
+            "original": "8340976768",
+            "node": "6076339197",
+            "shiftMeters": 243.24456178915995
+          },
+          {
+            "original": "14230343126",
+            "node": "1927365693",
+            "shiftMeters": 618.719473443339
+          },
+          {
+            "original": "13310257656",
+            "node": "6397239172",
+            "shiftMeters": 389.12655032135774
+          },
+          {
+            "original": "5716676861",
+            "node": "5716939264",
+            "shiftMeters": 307.528363265894
+          },
+          {
+            "original": "13358834491",
+            "node": "13358834491",
+            "shiftMeters": 0
+          },
+          {
+            "original": "11337817944",
+            "node": "10235908887",
+            "shiftMeters": 146.76523404744012
+          },
+          {
+            "original": "8816868899",
+            "node": "8816868897",
+            "shiftMeters": 18.64883827481003
+          },
+          {
+            "original": "6095474485",
+            "node": "4911127463",
+            "shiftMeters": 714.7888407914606
+          },
+          {
+            "original": "2913939722",
+            "node": "2913893302",
+            "shiftMeters": 163.45011755272546
+          },
+          {
+            "original": "6396481302",
+            "node": "8340859835",
+            "shiftMeters": 187.80176362324147
+          },
+          {
+            "original": "13179594297",
+            "node": "4194820057",
+            "shiftMeters": 85.66029775806261
+          },
+          {
+            "original": "13395177961",
+            "node": "13388854077",
+            "shiftMeters": 91.2482031877894
+          },
+          {
+            "original": "420496728",
+            "node": "420496728",
+            "shiftMeters": 0
+          },
+          {
+            "original": "9717416030",
+            "node": "642951149",
+            "shiftMeters": 1788.940218145369
+          },
+          {
+            "original": "12123979117",
+            "node": "8342739233",
+            "shiftMeters": 394.42691491580547
+          },
+          {
+            "original": "6324287982",
+            "node": "6324287982",
+            "shiftMeters": 0
+          },
+          {
+            "original": "12365509242",
+            "node": "12365483377",
+            "shiftMeters": 444.48672837892514
+          },
+          {
+            "original": "3328043418",
+            "node": "3328043418",
+            "shiftMeters": 0
+          },
+          {
+            "original": "6079923334",
+            "node": "13277728962",
+            "shiftMeters": 144.14581152430367
+          },
+          {
+            "original": "13196942024",
+            "node": "10803721608",
+            "shiftMeters": 271.61896488463464
+          }
+        ],
+        "remappedPortals": 62,
+        "maxShiftMeters": 2440.40324317458,
+        "meanShiftMeters": 381.0045361420935
+      }
+    },
+    {
+      "name": "arterial: new roads and branches remain routable",
+      "passed": true,
+      "detail": {
+        "usingNewRoad": 39
+      }
+    },
+    {
+      "name": "arterial: paired simulation conserves every trip and finite storage",
+      "passed": true,
+      "detail": {
+        "metrics": [
+          {
+            "t": 90000,
+            "generated": 1000,
+            "completed": 1000,
+            "base_completed": 1000,
+            "inside": 0,
+            "external": 0,
+            "unfinished": 0,
+            "total_wait_veh_h": 49.23593109803674,
+            "external_wait_veh_h": 0,
+            "spillback_link_min": 0,
+            "waiting": 0,
+            "conservation_error": 0,
+            "throughput_veh_h": 40
+          },
+          {
+            "t": 90000,
+            "generated": 1000,
+            "completed": 1000,
+            "base_completed": 1000,
+            "inside": 0,
+            "external": 0,
+            "unfinished": 0,
+            "total_wait_veh_h": 49.524152162272784,
+            "external_wait_veh_h": 0,
+            "spillback_link_min": 0,
+            "waiting": 0,
+            "conservation_error": 0,
+            "throughput_veh_h": 40
+          }
+        ],
+        "peak": 0.9090909090909091
+      }
+    },
+    {
+      "name": "arterial: traffic overlays map back to correct visible source edges",
+      "passed": true
+    },
+    {
+      "name": "arterial: routes obey road classes and vehicle restrictions",
+      "passed": true
+    },
+    {
+      "name": "Removed alley does not leave a phantom new signal or conflict junction",
+      "passed": true
+    },
+    {
+      "name": "Original source demand unchanged across both filters",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "detail": "no-small",
+      "tripCount": 1000,
+      "sourceFingerprint": "9c857747",
+      "fingerprint": "5c656f25",
+      "scope": {
+        "filtered": true,
+        "detail": "no-small",
+        "linkCounts": [
+          31701,
+          31707
+        ],
+        "removedLinkCounts": [
+          109017,
+          109017
+        ],
+        "projection": {
+          "assignments": [
+            {
+              "original": "13061473706",
+              "node": "13061473706",
+              "shiftMeters": 0
+            },
+            {
+              "original": "5684364965",
+              "node": "5684364965",
+              "shiftMeters": 0
+            },
+            {
+              "original": "4009681631",
+              "node": "4009681631",
+              "shiftMeters": 0
+            },
+            {
+              "original": "5716343287",
+              "node": "5709955295",
+              "shiftMeters": 153.21557320324862
+            },
+            {
+              "original": "3381103642",
+              "node": "3381103642",
+              "shiftMeters": 0
+            },
+            {
+              "original": "8292738818",
+              "node": "4208253927",
+              "shiftMeters": 292.20348860511575
+            },
+            {
+              "original": "2706474622",
+              "node": "8824627685",
+              "shiftMeters": 530.4412605604889
+            },
+            {
+              "original": "12056758491",
+              "node": "2733277428",
+              "shiftMeters": 336.5116897241464
+            },
+            {
+              "original": "12011957313",
+              "node": "4845772127",
+              "shiftMeters": 689.4864531011474
+            },
+            {
+              "original": "1706700670",
+              "node": "1706700670",
+              "shiftMeters": 0
+            },
+            {
+              "original": "444394907",
+              "node": "444394907",
+              "shiftMeters": 0
+            },
+            {
+              "original": "5710273585",
+              "node": "5710273585",
+              "shiftMeters": 0
+            },
+            {
+              "original": "1696156953",
+              "node": "1696156953",
+              "shiftMeters": 0
+            },
+            {
+              "original": "4224823315",
+              "node": "4845771967",
+              "shiftMeters": 147.27789854557244
+            },
+            {
+              "original": "4450091813",
+              "node": "4450091808",
+              "shiftMeters": 118.27673830893409
+            },
+            {
+              "original": "2476774468",
+              "node": "2476774468",
+              "shiftMeters": 0
+            },
+            {
+              "original": "10290603411",
+              "node": "10122900895",
+              "shiftMeters": 364.8540143194266
+            },
+            {
+              "original": "14156524870",
+              "node": "1046210099",
+              "shiftMeters": 689.8688744638348
+            },
+            {
+              "original": "5698561227",
+              "node": "5698561227",
+              "shiftMeters": 0
+            },
+            {
+              "original": "4350980207",
+              "node": "5710691045",
+              "shiftMeters": 221.15120406183703
+            },
+            {
+              "original": "2188036136",
+              "node": "2188036136",
+              "shiftMeters": 0
+            },
+            {
+              "original": "106095678",
+              "node": "106095678",
+              "shiftMeters": 0
+            },
+            {
+              "original": "1688222761",
+              "node": "1688222761",
+              "shiftMeters": 0
+            },
+            {
+              "original": "8336854377",
+              "node": "8336854378",
+              "shiftMeters": 53.03468306683774
+            },
+            {
+              "original": "8338736836",
+              "node": "8338736836",
+              "shiftMeters": 0
+            },
+            {
+              "original": "1600044810",
+              "node": "1600044651",
+              "shiftMeters": 344.6311766352545
+            },
+            {
+              "original": "5674081987",
+              "node": "5674082564",
+              "shiftMeters": 349.8744984319382
+            },
+            {
+              "original": "5690008997",
+              "node": "5690008997",
+              "shiftMeters": 0
+            },
+            {
+              "original": "13944962077",
+              "node": "13944962077",
+              "shiftMeters": 0
+            },
+            {
+              "original": "1495022762",
+              "node": "1495022762",
+              "shiftMeters": 0
+            },
+            {
+              "original": "103015212",
+              "node": "103015212",
+              "shiftMeters": 0
+            },
+            {
+              "original": "8336852352",
+              "node": "3526985811",
+              "shiftMeters": 779.5246332637604
+            },
+            {
+              "original": "9662839489",
+              "node": "1599909011",
+              "shiftMeters": 168.39201065668138
+            },
+            {
+              "original": "12298919582",
+              "node": "12298919582",
+              "shiftMeters": 0
+            },
+            {
+              "original": "5710117910",
+              "node": "5707717471",
+              "shiftMeters": 210.2256342742247
+            },
+            {
+              "original": "5671897597",
+              "node": "5671897570",
+              "shiftMeters": 178.74709056373283
+            },
+            {
+              "original": "110390716",
+              "node": "110390716",
+              "shiftMeters": 0
+            },
+            {
+              "original": "5719254643",
+              "node": "13687756060",
+              "shiftMeters": 235.97540921248546
+            },
+            {
+              "original": "2443902044",
+              "node": "2443902044",
+              "shiftMeters": 0
+            },
+            {
+              "original": "426895639",
+              "node": "426895639",
+              "shiftMeters": 0
+            },
+            {
+              "original": "8705791998",
+              "node": "6418688954",
+              "shiftMeters": 85.15923720889009
+            },
+            {
+              "original": "4123890463",
+              "node": "14206178689",
+              "shiftMeters": 56.12980586105756
+            },
+            {
+              "original": "6324000291",
+              "node": "2706511038",
+              "shiftMeters": 293.17462916323467
+            },
+            {
+              "original": "5709973345",
+              "node": "12174390985",
+              "shiftMeters": 293.20214580558644
+            },
+            {
+              "original": "5671242582",
+              "node": "4931817246",
+              "shiftMeters": 473.79470267300337
+            },
+            {
+              "original": "6017695868",
+              "node": "4844069883",
+              "shiftMeters": 1798.1792775410356
+            },
+            {
+              "original": "5719275459",
+              "node": "5716815995",
+              "shiftMeters": 368.81868709977283
+            },
+            {
+              "original": "5724580164",
+              "node": "4901273832",
+              "shiftMeters": 86.90842603568402
+            },
+            {
+              "original": "6666412758",
+              "node": "6666412758",
+              "shiftMeters": 0
+            },
+            {
+              "original": "426893920",
+              "node": "1495094484",
+              "shiftMeters": 60.36692493410656
+            },
+            {
+              "original": "8344004444",
+              "node": "8344004445",
+              "shiftMeters": 92.9469588528853
+            },
+            {
+              "original": "6324129689",
+              "node": "8340729488",
+              "shiftMeters": 418.8823078013696
+            },
+            {
+              "original": "11012544168",
+              "node": "8333452352",
+              "shiftMeters": 541.813995139475
+            },
+            {
+              "original": "8337588628",
+              "node": "4954642003",
+              "shiftMeters": 181.17662730606256
+            },
+            {
+              "original": "1893790680",
+              "node": "1893790170",
+              "shiftMeters": 641.2977518157996
+            },
+            {
+              "original": "2517198056",
+              "node": "2517177546",
+              "shiftMeters": 111.58785570123648
+            },
+            {
+              "original": "8445444818",
+              "node": "5722299661",
+              "shiftMeters": 552.4745361598123
+            },
+            {
+              "original": "5721859856",
+              "node": "5721859856",
+              "shiftMeters": 0
+            },
+            {
+              "original": "312995996",
+              "node": "6178451403",
+              "shiftMeters": 518.8949045163191
+            },
+            {
+              "original": "8342818675",
+              "node": "5686405076",
+              "shiftMeters": 113.93538114650772
+            },
+            {
+              "original": "6099548215",
+              "node": "6099548810",
+              "shiftMeters": 152.33068937348096
+            },
+            {
+              "original": "8340976768",
+              "node": "6046915665",
+              "shiftMeters": 93.28523862862765
+            },
+            {
+              "original": "14230343126",
+              "node": "14230343127",
+              "shiftMeters": 33.29434261252144
+            },
+            {
+              "original": "13310257656",
+              "node": "6397239172",
+              "shiftMeters": 389.12655032135774
+            },
+            {
+              "original": "5716676861",
+              "node": "12009091887",
+              "shiftMeters": 172.24995631349177
+            },
+            {
+              "original": "13358834491",
+              "node": "13358834491",
+              "shiftMeters": 0
+            },
+            {
+              "original": "11337817944",
+              "node": "11337817944",
+              "shiftMeters": 0
+            },
+            {
+              "original": "8816868899",
+              "node": "8816868897",
+              "shiftMeters": 18.64883827481003
+            },
+            {
+              "original": "6095474485",
+              "node": "13324564230",
+              "shiftMeters": 458.0299214079787
+            },
+            {
+              "original": "2913939722",
+              "node": "2913893302",
+              "shiftMeters": 163.45011755272546
+            },
+            {
+              "original": "6396481302",
+              "node": "8340859835",
+              "shiftMeters": 187.80176362324147
+            },
+            {
+              "original": "13179594297",
+              "node": "4194820057",
+              "shiftMeters": 85.66029775806261
+            },
+            {
+              "original": "13395177961",
+              "node": "13388854077",
+              "shiftMeters": 91.2482031877894
+            },
+            {
+              "original": "420496728",
+              "node": "420496728",
+              "shiftMeters": 0
+            },
+            {
+              "original": "9717416030",
+              "node": "10277107644",
+              "shiftMeters": 229.98813586139582
+            },
+            {
+              "original": "12123979117",
+              "node": "8342739233",
+              "shiftMeters": 394.42691491580547
+            },
+            {
+              "original": "6324287982",
+              "node": "6324287982",
+              "shiftMeters": 0
+            },
+            {
+              "original": "12365509242",
+              "node": "12365509233",
+              "shiftMeters": 261.1768797194727
+            },
+            {
+              "original": "3328043418",
+              "node": "3328043418",
+              "shiftMeters": 0
+            },
+            {
+              "original": "6079923334",
+              "node": "13277728962",
+              "shiftMeters": 144.14581152430367
+            },
+            {
+              "original": "13196942024",
+              "node": "10803721608",
+              "shiftMeters": 271.61896488463464
+            }
+          ],
+          "remappedPortals": 52,
+          "maxShiftMeters": 1798.1792775410356,
+          "meanShiftMeters": 193.81381619407665
+        }
+      },
+      "metrics": [
+        {
+          "t": 90000,
+          "generated": 1000,
+          "completed": 1000,
+          "base_completed": 1000,
+          "inside": 0,
+          "external": 0,
+          "unfinished": 0,
+          "total_wait_veh_h": 46.47547982971632,
+          "external_wait_veh_h": 0,
+          "spillback_link_min": 0.1,
+          "waiting": 0,
+          "conservation_error": 0,
+          "throughput_veh_h": 40
+        },
+        {
+          "t": 90000,
+          "generated": 1000,
+          "completed": 1000,
+          "base_completed": 1000,
+          "inside": 0,
+          "external": 0,
+          "unfinished": 0,
+          "total_wait_veh_h": 42.75364223285313,
+          "external_wait_veh_h": 0,
+          "spillback_link_min": 0.1,
+          "waiting": 0,
+          "conservation_error": 0,
+          "throughput_veh_h": 40
+        }
+      ],
+      "design": {
+        "bbox": [
+          105.74,
+          20.94,
+          106,
+          21.19
+        ],
+        "lines": [
+          {
+            "id": "L1",
+            "kind": "road",
+            "lanes": 2,
+            "points": [
+              {
+                "ll": [
+                  105.9270458,
+                  20.9801084
+                ],
+                "ref": "base:17020"
+              },
+              {
+                "ll": [
+                  105.894878,
+                  20.9825317
+                ],
+                "ref": "base:55762"
+              }
+            ]
+          },
+          {
+            "id": "L2",
+            "kind": "access",
+            "lanes": 1,
+            "points": [
+              {
+                "ll": [
+                  105.9109619,
+                  20.98132005
+                ],
+                "ref": "design:L1"
+              },
+              {
+                "ll": [
+                  105.911924,
+                  20.977999
+                ],
+                "ref": "base:17056"
+              }
+            ]
+          }
+        ],
+        "autoConnect": false
+      },
+      "usingNewRoad": 85
+    },
+    {
+      "detail": "arterial",
+      "tripCount": 1000,
+      "sourceFingerprint": "9c857747",
+      "fingerprint": "5e3b206e",
+      "scope": {
+        "filtered": true,
+        "detail": "arterial",
+        "linkCounts": [
+          17234,
+          17242
+        ],
+        "removedLinkCounts": [
+          123484,
+          123484
+        ],
+        "projection": {
+          "assignments": [
+            {
+              "original": "13061473706",
+              "node": "13061473706",
+              "shiftMeters": 0
+            },
+            {
+              "original": "5684364965",
+              "node": "5684364965",
+              "shiftMeters": 0
+            },
+            {
+              "original": "4009681631",
+              "node": "4009681631",
+              "shiftMeters": 0
+            },
+            {
+              "original": "5716343287",
+              "node": "12556940348",
+              "shiftMeters": 394.3171958537948
+            },
+            {
+              "original": "3381103642",
+              "node": "3381103642",
+              "shiftMeters": 0
+            },
+            {
+              "original": "8292738818",
+              "node": "1009138171",
+              "shiftMeters": 1563.9554531993554
+            },
+            {
+              "original": "2706474622",
+              "node": "8824627685",
+              "shiftMeters": 530.4412605604889
+            },
+            {
+              "original": "12056758491",
+              "node": "2733277428",
+              "shiftMeters": 336.5116897241464
+            },
+            {
+              "original": "12011957313",
+              "node": "4845772127",
+              "shiftMeters": 689.4864531011474
+            },
+            {
+              "original": "1706700670",
+              "node": "1706700670",
+              "shiftMeters": 0
+            },
+            {
+              "original": "444394907",
+              "node": "444394907",
+              "shiftMeters": 0
+            },
+            {
+              "original": "5710273585",
+              "node": "1699561405",
+              "shiftMeters": 492.88586355260804
+            },
+            {
+              "original": "1696156953",
+              "node": "1696156953",
+              "shiftMeters": 0
+            },
+            {
+              "original": "4224823315",
+              "node": "4845771967",
+              "shiftMeters": 147.27789854557244
+            },
+            {
+              "original": "4450091813",
+              "node": "4450091808",
+              "shiftMeters": 118.27673830893409
+            },
+            {
+              "original": "2476774468",
+              "node": "2476774468",
+              "shiftMeters": 0
+            },
+            {
+              "original": "10290603411",
+              "node": "10122900895",
+              "shiftMeters": 364.8540143194266
+            },
+            {
+              "original": "14156524870",
+              "node": "1046210099",
+              "shiftMeters": 689.8688744638348
+            },
+            {
+              "original": "5698561227",
+              "node": "5698561227",
+              "shiftMeters": 0
+            },
+            {
+              "original": "4350980207",
+              "node": "5710691045",
+              "shiftMeters": 221.15120406183703
+            },
+            {
+              "original": "2188036136",
+              "node": "2188036136",
+              "shiftMeters": 0
+            },
+            {
+              "original": "106095678",
+              "node": "10302026141",
+              "shiftMeters": 182.37247587286848
+            },
+            {
+              "original": "1688222761",
+              "node": "1756928963",
+              "shiftMeters": 74.55170132196868
+            },
+            {
+              "original": "8336854377",
+              "node": "5498981865",
+              "shiftMeters": 284.38637717197344
+            },
+            {
+              "original": "8338736836",
+              "node": "611554963",
+              "shiftMeters": 184.55857158365782
+            },
+            {
+              "original": "1600044810",
+              "node": "6394859160",
+              "shiftMeters": 690.4970101499349
+            },
+            {
+              "original": "5674081987",
+              "node": "5674082564",
+              "shiftMeters": 349.8744984319382
+            },
+            {
+              "original": "5690008997",
+              "node": "1893246344",
+              "shiftMeters": 267.72319015169404
+            },
+            {
+              "original": "13944962077",
+              "node": "13944962077",
+              "shiftMeters": 0
+            },
+            {
+              "original": "1495022762",
+              "node": "1495022762",
+              "shiftMeters": 0
+            },
+            {
+              "original": "103015212",
+              "node": "5689588156",
+              "shiftMeters": 284.2592350883259
+            },
+            {
+              "original": "8336852352",
+              "node": "12827716920",
+              "shiftMeters": 1266.64396252854
+            },
+            {
+              "original": "9662839489",
+              "node": "1599909011",
+              "shiftMeters": 168.39201065668138
+            },
+            {
+              "original": "12298919582",
+              "node": "12298919582",
+              "shiftMeters": 0
+            },
+            {
+              "original": "5710117910",
+              "node": "5707717471",
+              "shiftMeters": 210.2256342742247
+            },
+            {
+              "original": "5671897597",
+              "node": "5671897570",
+              "shiftMeters": 178.74709056373283
+            },
+            {
+              "original": "110390716",
+              "node": "110390716",
+              "shiftMeters": 0
+            },
+            {
+              "original": "5719254643",
+              "node": "13687756060",
+              "shiftMeters": 235.97540921248546
+            },
+            {
+              "original": "2443902044",
+              "node": "6685099221",
+              "shiftMeters": 255.11623811117943
+            },
+            {
+              "original": "426895639",
+              "node": "426895639",
+              "shiftMeters": 0
+            },
+            {
+              "original": "8705791998",
+              "node": "5719106740",
+              "shiftMeters": 120.52959405888691
+            },
+            {
+              "original": "4123890463",
+              "node": "13110334621",
+              "shiftMeters": 609.7585607730323
+            },
+            {
+              "original": "6324000291",
+              "node": "7325732075",
+              "shiftMeters": 1910.3215914471054
+            },
+            {
+              "original": "5709973345",
+              "node": "13176917703",
+              "shiftMeters": 642.7847419859942
+            },
+            {
+              "original": "5671242582",
+              "node": "5681590528",
+              "shiftMeters": 2407.04745211639
+            },
+            {
+              "original": "6017695868",
+              "node": "1673142618",
+              "shiftMeters": 2124.7510720317327
+            },
+            {
+              "original": "5719275459",
+              "node": "84806255",
+              "shiftMeters": 380.2282742195795
+            },
+            {
+              "original": "5724580164",
+              "node": "4901273832",
+              "shiftMeters": 86.90842603568402
+            },
+            {
+              "original": "6666412758",
+              "node": "6601299820",
+              "shiftMeters": 76.50397858935183
+            },
+            {
+              "original": "426893920",
+              "node": "6625119955",
+              "shiftMeters": 130.0953791070232
+            },
+            {
+              "original": "8344004444",
+              "node": "8344004445",
+              "shiftMeters": 92.9469588528853
+            },
+            {
+              "original": "6324129689",
+              "node": "8340729488",
+              "shiftMeters": 418.8823078013696
+            },
+            {
+              "original": "11012544168",
+              "node": "8333452352",
+              "shiftMeters": 541.813995139475
+            },
+            {
+              "original": "8337588628",
+              "node": "8333357769",
+              "shiftMeters": 2440.40324317458
+            },
+            {
+              "original": "1893790680",
+              "node": "1893790170",
+              "shiftMeters": 641.2977518157996
+            },
+            {
+              "original": "2517198056",
+              "node": "2517177546",
+              "shiftMeters": 111.58785570123648
+            },
+            {
+              "original": "8445444818",
+              "node": "5722299661",
+              "shiftMeters": 552.4745361598123
+            },
+            {
+              "original": "5721859856",
+              "node": "11556414932",
+              "shiftMeters": 352.69694985496994
+            },
+            {
+              "original": "312995996",
+              "node": "6178451403",
+              "shiftMeters": 518.8949045163191
+            },
+            {
+              "original": "8342818675",
+              "node": "91709329",
+              "shiftMeters": 356.1582320401993
+            },
+            {
+              "original": "6099548215",
+              "node": "6099548810",
+              "shiftMeters": 152.33068937348096
+            },
+            {
+              "original": "8340976768",
+              "node": "6076339197",
+              "shiftMeters": 243.24456178915995
+            },
+            {
+              "original": "14230343126",
+              "node": "1927365693",
+              "shiftMeters": 618.719473443339
+            },
+            {
+              "original": "13310257656",
+              "node": "6397239172",
+              "shiftMeters": 389.12655032135774
+            },
+            {
+              "original": "5716676861",
+              "node": "5716939264",
+              "shiftMeters": 307.528363265894
+            },
+            {
+              "original": "13358834491",
+              "node": "13358834491",
+              "shiftMeters": 0
+            },
+            {
+              "original": "11337817944",
+              "node": "10235908887",
+              "shiftMeters": 146.76523404744012
+            },
+            {
+              "original": "8816868899",
+              "node": "8816868897",
+              "shiftMeters": 18.64883827481003
+            },
+            {
+              "original": "6095474485",
+              "node": "4911127463",
+              "shiftMeters": 714.7888407914606
+            },
+            {
+              "original": "2913939722",
+              "node": "2913893302",
+              "shiftMeters": 163.45011755272546
+            },
+            {
+              "original": "6396481302",
+              "node": "8340859835",
+              "shiftMeters": 187.80176362324147
+            },
+            {
+              "original": "13179594297",
+              "node": "4194820057",
+              "shiftMeters": 85.66029775806261
+            },
+            {
+              "original": "13395177961",
+              "node": "13388854077",
+              "shiftMeters": 91.2482031877894
+            },
+            {
+              "original": "420496728",
+              "node": "420496728",
+              "shiftMeters": 0
+            },
+            {
+              "original": "9717416030",
+              "node": "642951149",
+              "shiftMeters": 1788.940218145369
+            },
+            {
+              "original": "12123979117",
+              "node": "8342739233",
+              "shiftMeters": 394.42691491580547
+            },
+            {
+              "original": "6324287982",
+              "node": "6324287982",
+              "shiftMeters": 0
+            },
+            {
+              "original": "12365509242",
+              "node": "12365483377",
+              "shiftMeters": 444.48672837892514
+            },
+            {
+              "original": "3328043418",
+              "node": "3328043418",
+              "shiftMeters": 0
+            },
+            {
+              "original": "6079923334",
+              "node": "13277728962",
+              "shiftMeters": 144.14581152430367
+            },
+            {
+              "original": "13196942024",
+              "node": "10803721608",
+              "shiftMeters": 271.61896488463464
+            }
+          ],
+          "remappedPortals": 62,
+          "maxShiftMeters": 2440.40324317458,
+          "meanShiftMeters": 381.0045361420935
+        }
+      },
+      "metrics": [
+        {
+          "t": 90000,
+          "generated": 1000,
+          "completed": 1000,
+          "base_completed": 1000,
+          "inside": 0,
+          "external": 0,
+          "unfinished": 0,
+          "total_wait_veh_h": 49.23593109803674,
+          "external_wait_veh_h": 0,
+          "spillback_link_min": 0,
+          "waiting": 0,
+          "conservation_error": 0,
+          "throughput_veh_h": 40
+        },
+        {
+          "t": 90000,
+          "generated": 1000,
+          "completed": 1000,
+          "base_completed": 1000,
+          "inside": 0,
+          "external": 0,
+          "unfinished": 0,
+          "total_wait_veh_h": 49.524152162272784,
+          "external_wait_veh_h": 0,
+          "spillback_link_min": 0,
+          "waiting": 0,
+          "conservation_error": 0,
+          "throughput_veh_h": 40
+        }
+      ],
+      "design": {
+        "bbox": [
+          105.74,
+          20.94,
+          106,
+          21.19
+        ],
+        "lines": [
+          {
+            "id": "L1",
+            "kind": "road",
+            "lanes": 2,
+            "points": [
+              {
+                "ll": [
+                  105.9567267,
+                  21.0624641
+                ],
+                "ref": "base:73985"
+              },
+              {
+                "ll": [
+                  105.9559517,
+                  21.0381242
+                ],
+                "ref": "base:111932"
+              }
+            ]
+          },
+          {
+            "id": "L2",
+            "kind": "access",
+            "lanes": 1,
+            "points": [
+              {
+                "ll": [
+                  105.9563392,
+                  21.05029415
+                ],
+                "ref": "design:L1"
+              },
+              {
+                "ll": [
+                  105.95699,
+                  21.052449
+                ],
+                "ref": "base:74200"
+              }
+            ]
+          }
+        ],
+        "autoConnect": false
+      },
+      "usingNewRoad": 39
+    }
+  ]
+}
