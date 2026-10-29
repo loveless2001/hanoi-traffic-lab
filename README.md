@@ -2,6 +2,13 @@
 
 [Mở trình giả lập](https://loveless2001.github.io/hanoi-traffic-lab/) · [Báo cáo](https://loveless2001.github.io/hanoi-traffic-lab/report.html)
 
+[Ca thử 45.000 chuyến trong 5,2 km²: một đường + ba nhánh](https://loveless2001.github.io/hanoi-traffic-lab/experiments/area-45000-2026-10-30/) · [Mở bản thử riêng](https://loveless2001.github.io/hanoi-traffic-lab/trial-area-45000.html)
+
+Ca thử giữ cùng toàn bộ OD, giờ đi và loại xe cho hiện trạng, chỉ thêm đường,
+và đường + ba nhánh. Thiết kế được cố định trước khi chạy. Báo cáo kèm bảng
+CSV, mạng GeoJSON, đầy đủ chuyến CSV nén, kiểm tra bảo toàn xe và spillback gộp
+về cạnh gốc. Bản thử lưu riêng trong trình duyệt, không thay thiết kế bản chính.
+
 Tự vẽ đường và thêm/xóa đường nhánh trên mạng đường Hà Nội phủ toàn vùng
 trong Vành đai 3 và dải đệm, rồi chạy
 hiện trạng và phương án mới với **chính xác cùng một tập chuyến đi**: cùng

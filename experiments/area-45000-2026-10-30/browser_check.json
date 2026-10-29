@@ -1,0 +1,55 @@
+{
+  "base": "http://127.0.0.1:8766/",
+  "passed": true,
+  "errors": [],
+  "error": "",
+  "tripCount": 45000,
+  "sameDemand": true,
+  "fingerprint": "9f40391f",
+  "metrics": [
+    {
+      "t": 90000,
+      "boundary_in": 16991,
+      "boundary_out": 17294,
+      "generated": 45000,
+      "completed": 45000,
+      "base_completed": 45000,
+      "inside": 0,
+      "external": 0,
+      "unfinished": 0,
+      "total_wait_veh_h": 678.07747941828,
+      "external_wait_veh_h": 0.10380501801458498,
+      "spillback_link_min": 587.6333333333333,
+      "waiting": 0,
+      "conservation_error": 0,
+      "throughput_veh_h": 1800
+    },
+    {
+      "t": 90000,
+      "boundary_in": 16991,
+      "boundary_out": 17294,
+      "generated": 45000,
+      "completed": 45000,
+      "base_completed": 45000,
+      "inside": 0,
+      "external": 0,
+      "unfinished": 0,
+      "total_wait_veh_h": 854.8017099381318,
+      "external_wait_veh_h": 0.0918004063785904,
+      "spillback_link_min": 639.7666666666667,
+      "waiting": 0,
+      "conservation_error": 0,
+      "throughput_veh_h": 1800
+    }
+  ],
+  "usingNewRoad": 4613,
+  "seconds": 10.76159999999404,
+  "mainPreserved": true,
+  "checks": [
+    "Report charts load and mobile layout fits",
+    "Frozen preset has 45,000 trips, one road and three branches",
+    "Real browser worker matches reference metrics",
+    "Same exact paired demand",
+    "Main simulator storage preserved"
+  ]
+}

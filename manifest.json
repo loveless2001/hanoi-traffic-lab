@@ -1,5 +1,5 @@
 {
-  "created": "2026-10-29",
+  "created": "2026-10-30",
   "calibrated": false,
   "experiment_runs": 124,
   "text_line_endings": "LF, as published by Git",
@@ -175,6 +175,81 @@
       "sha256": "c960113b045e7d2a7b723b185b2dc72b406910d2f43472cf604aee7035adee13"
     },
     {
+      "path": "experiments/area-45000-2026-10-30/browser_check.json",
+      "bytes": 1432,
+      "sha256": "e58527d120b1e0d815d7e480a815a8da73ef107c8032b2bc3ab47d5373d5de7a"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/config.json",
+      "bytes": 438,
+      "sha256": "5f44b58d49f1ca1bdb70ca05d46eed4b94766b1fedae3098df1315268dbbc559"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/demand_audit.json",
+      "bytes": 597,
+      "sha256": "d2fded6cc7eb7bc28c47d5fe924d86b930cbb5a931122b1f26381b53d8a0e354"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/design-map.png",
+      "bytes": 193203,
+      "sha256": "37a64f86d1d5c7c405c49c4c139550e7bc267b68cd20f503d8bc00f89a097a21"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/design-map.svg",
+      "bytes": 150112,
+      "sha256": "cfe2e8b84d58c9503932bb6490adb6bc28de556b487f1d23f3e41dc866875598"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/design.json",
+      "bytes": 1527,
+      "sha256": "2ada9e7150c014a6bac865b64664517d49032efb95f5ab36f1d5548f51cbbb2f"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/first_run_summary.json",
+      "bytes": 2228,
+      "sha256": "5e6d155b667e20e720320cad43beba35af4eb1fa43a7ccdb4c269e22d4fcba71"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/index.html",
+      "bytes": 9356,
+      "sha256": "6aa67f291ec747f23eb22707cbc041a9d1d7ef73fcd03e550afb2493627edc61"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/networks.geojson",
+      "bytes": 664086,
+      "sha256": "68959ad9c6d3feb88e90bdcb40e6d883c75ca82369217600a6f04c93328d8594"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/protocol.json",
+      "bytes": 1615,
+      "sha256": "a360e9ad55379898584babe4c0a90e79b0b5de2aa6e083b4f144712c34d045f5"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/result.json",
+      "bytes": 2508384,
+      "sha256": "46fd27e93e0bb0028e5dbbdc4ecf489969625b9ca6d634923f8e9151ba44b768"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/summary.csv",
+      "bytes": 494,
+      "sha256": "04ba66f8ee05bc60c3f672fcb5dd52e651d834578292435ba7c7b187266492f4"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/time-series.png",
+      "bytes": 246052,
+      "sha256": "1589e2eda188568f765b781742f0d08cb54946eb7b9743c42950ae54ffaf4cd4"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/time-series.svg",
+      "bytes": 265516,
+      "sha256": "0df1e42ef23e5a079908bc552e0acdc344f63453d53b24c9fe79c42d4e999694"
+    },
+    {
+      "path": "experiments/area-45000-2026-10-30/trips.csv.gz",
+      "bytes": 747462,
+      "sha256": "a85403d861bc5e9b21cce4046d6539a9950dd99b924331bfafcb26c29f5d8dba"
+    },
+    {
       "path": "historical_observations.json",
       "bytes": 1442,
       "sha256": "5fe14d573d0a58a4ea650aed76454699402ca466f6cd18553cb8f4a62b8b3888"
@@ -251,8 +326,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12633,
-      "sha256": "498e4c4e37363a896f40073fcaaadad3859d1ac337c35fbee80cf50c06788440"
+      "bytes": 13303,
+      "sha256": "8703b6c459c335b8017ef1d62295c3442343b818d699fb55b9a726fed4786206"
     },
     {
       "path": "README.txt",
@@ -340,6 +415,11 @@
       "sha256": "cabb4feab97c6532655fe3ec6ce7a8164d42fc651b81f0e4dfc3ae19efe31a85"
     },
     {
+      "path": "scripts/build_area_45000_report.py",
+      "bytes": 15916,
+      "sha256": "94df5078b8977d4a01b5728776a22bdaec7636cd1f07ebabd4ee1377e57b4963"
+    },
+    {
       "path": "scripts/build_network.py",
       "bytes": 4699,
       "sha256": "6cd2eaa9095c509e5a401470bf735dbcb95b6e3760d901e3331889dcb22bec85"
@@ -362,7 +442,12 @@
     {
       "path": "scripts/build_site.py",
       "bytes": 6610,
-      "sha256": "20af84166049a6bf6b9ef837dcfd8119bd3cabb9deb6d567e343eea4a0e021ee"
+      "sha256": "b5b6923af44287c84560ac5d6087d5a821dd44f7883dc533e60787e601ec9e51"
+    },
+    {
+      "path": "scripts/export_area_45000.cjs",
+      "bytes": 2530,
+      "sha256": "3548a3bf879fcdea66287d026e66663627c13df1ffe69923d69143d174bfa62a"
     },
     {
       "path": "scripts/export_ui.py",
@@ -378,6 +463,11 @@
       "path": "scripts/requirements-research.txt",
       "bytes": 130,
       "sha256": "f4a805ae7f607cc11374e7525ebc35153d7090731ba7e10c82daf525a8e01ad9"
+    },
+    {
+      "path": "scripts/run_area_45000.cjs",
+      "bytes": 7467,
+      "sha256": "05cc721fd82d386ce8bc92ae5dc4c81dd1f2ed768ee2386b8ac4de3ad8f06392"
     },
     {
       "path": "scripts/simulator-fragment.html",
@@ -418,6 +508,11 @@
       "path": "summary.json",
       "bytes": 9749,
       "sha256": "77049dc89c1d7701aafe343b974330df95aa2ced76def807da3fac52b4eaad81"
+    },
+    {
+      "path": "trial-area-45000.html",
+      "bytes": 983164,
+      "sha256": "b483a6a3f4b605eaa1be62c5a0b01b3ea91904959f2196cc94e4fbdd5d43d443"
     },
     {
       "path": "ui_data.json",

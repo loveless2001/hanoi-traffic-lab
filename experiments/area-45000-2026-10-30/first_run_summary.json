@@ -1,0 +1,80 @@
+{
+  "demandFingerprint": "9f40391f",
+  "inputs": [
+    {
+      "name": "config.json",
+      "sha256": "5f44b58d49f1ca1bdb70ca05d46eed4b94766b1fedae3098df1315268dbbc559"
+    },
+    {
+      "name": "design.json",
+      "sha256": "2ada9e7150c014a6bac865b64664517d49032efb95f5ab36f1d5548f51cbbb2f"
+    },
+    {
+      "name": "protocol.json",
+      "sha256": "a360e9ad55379898584babe4c0a90e79b0b5de2aa6e083b4f144712c34d045f5"
+    }
+  ],
+  "scenarios": [
+    {
+      "key": "baseline",
+      "metrics": {
+        "t": 90000,
+        "boundary_in": 16991,
+        "boundary_out": 17294,
+        "generated": 45000,
+        "completed": 45000,
+        "base_completed": 45000,
+        "inside": 0,
+        "external": 0,
+        "unfinished": 0,
+        "total_wait_veh_h": 678.07747941828,
+        "external_wait_veh_h": 0.10380501801458498,
+        "spillback_link_min": 587.6333333333333,
+        "waiting": 0,
+        "conservation_error": 0,
+        "throughput_veh_h": 1800
+      }
+    },
+    {
+      "key": "road_only",
+      "metrics": {
+        "t": 90000,
+        "boundary_in": 16991,
+        "boundary_out": 17294,
+        "generated": 45000,
+        "completed": 45000,
+        "base_completed": 45000,
+        "inside": 0,
+        "external": 0,
+        "unfinished": 0,
+        "total_wait_veh_h": 783.616464802982,
+        "external_wait_veh_h": 0.09624485082303484,
+        "spillback_link_min": 630.4333333333333,
+        "waiting": 0,
+        "conservation_error": 0,
+        "throughput_veh_h": 1800
+      }
+    },
+    {
+      "key": "road_and_3_branches",
+      "metrics": {
+        "t": 90000,
+        "boundary_in": 16991,
+        "boundary_out": 17294,
+        "generated": 45000,
+        "completed": 45000,
+        "base_completed": 45000,
+        "inside": 0,
+        "external": 0,
+        "unfinished": 0,
+        "total_wait_veh_h": 854.8017099381318,
+        "external_wait_veh_h": 0.0918004063785904,
+        "spillback_link_min": 639.7666666666667,
+        "waiting": 0,
+        "conservation_error": 0,
+        "throughput_veh_h": 1800
+      }
+    }
+  ],
+  "note": "Raw results frozen before adding diagnostics that control for link splitting. Geometry, demand and model parameters were not changed."
+}

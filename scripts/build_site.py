@@ -25,6 +25,6 @@ public_files=[p for p in sorted(P.rglob('*')) if p.is_file() and not any(x in p.
 def published_bytes(p):
     raw=p.read_bytes()
     return raw if p.suffix.lower() in ['.png','.tif','.pdf','.gz'] else raw.replace(b'\r\n',b'\n')
-manifest=dict(created='2026-10-29',calibrated=False,experiment_runs=124,text_line_endings='LF, as published by Git',files=[dict(path=p.relative_to(P).as_posix(),bytes=len(published_bytes(p)),sha256=hashlib.sha256(published_bytes(p)).hexdigest()) for p in public_files])
+manifest=dict(created='2026-10-30',calibrated=False,experiment_runs=124,text_line_endings='LF, as published by Git',files=[dict(path=p.relative_to(P).as_posix(),bytes=len(published_bytes(p)),sha256=hashlib.sha256(published_bytes(p)).hexdigest()) for p in public_files])
 (P/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
 print('Built index.html, simulator.html and public manifest; site bytes',(P/'index.html').stat().st_size)

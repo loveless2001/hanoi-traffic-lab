@@ -1,0 +1,46 @@
+{
+  "created": "2026-10-30",
+  "predeclared": true,
+  "baselineCommit": "3d51193b0ac677e12c196b63e09b9b8fb56b8d30",
+  "scenarioOrder": [
+    "baseline",
+    "road_only",
+    "road_and_3_branches"
+  ],
+  "roadSelection": "Reuse the pre-existing area_example_design L1, not selected using these 45,000-trip results.",
+  "branchRule": "At 25%, 50%, 75% of L1; alternate north/south sides. Nearest distinct retained at-grade source-road group, distance 80–500 m, perpendicular offset at least 40 m, endpoints inside ROI margin. No outcome-based tuning.",
+  "branches": [
+    {
+      "id": "L2",
+      "atRoadFraction": 0.25,
+      "side": 1,
+      "sourceRoad": "Phố Huỳnh Thúc Kháng",
+      "sourceGroup": "base:115063",
+      "lengthMeters": 204.2165114941794
+    },
+    {
+      "id": "L3",
+      "atRoadFraction": 0.5,
+      "side": -1,
+      "sourceRoad": "Phố Chùa Láng",
+      "sourceGroup": "base:30993",
+      "lengthMeters": 257.9540898264396
+    },
+    {
+      "id": "L4",
+      "atRoadFraction": 0.75,
+      "side": 1,
+      "sourceRoad": "Đường Vành đai 1",
+      "sourceGroup": "base:139832",
+      "lengthMeters": 90.5744529567945
+    }
+  ],
+  "horizonSeconds": 90000,
+  "dtSeconds": 2,
+  "sameDemand": "Generate local baseline demand once, reuse identical trip objects for all three alternatives. No induced demand.",
+  "limitations": [
+    "One seed, one hypothetical alignment; not a planning recommendation.",
+    "Fixed routes based on free-flow cost and expected signal delay; no congestion rerouting.",
+    "45,000 trips apply to this local box, not observed regional flow."
+  ]
+}
