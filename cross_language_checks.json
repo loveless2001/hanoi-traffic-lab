@@ -1,0 +1,35 @@
+[
+  {
+    "scenario": "S0",
+    "diffs": {
+      "completed": 0,
+      "base_completed": 0,
+      "unfinished": 0,
+      "total_wait_veh_h": 5.229594535194337e-12,
+      "external_wait_veh_h": 5.684341886080802e-14,
+      "spillback_link_min": 0
+    }
+  },
+  {
+    "scenario": "S2",
+    "diffs": {
+      "completed": 0,
+      "base_completed": 0,
+      "unfinished": 0,
+      "total_wait_veh_h": -1.3642420526593924e-12,
+      "external_wait_veh_h": -8.526512829121202e-14,
+      "spillback_link_min": 0
+    }
+  },
+  {
+    "scenario": "S3",
+    "diffs": {
+      "completed": 0,
+      "base_completed": 0,
+      "unfinished": 0,
+      "total_wait_veh_h": -9.094947017729282e-12,
+      "external_wait_veh_h": 2.2737367544323206e-13,
+      "spillback_link_min": 0
+    }
+  }
+]

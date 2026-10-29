@@ -1,0 +1,66 @@
+[
+  {
+    "id": "OSM",
+    "url": "https://api.openstreetmap.org/api/0.6/map?bbox=105.800,21.010,105.832,21.032",
+    "type": "crowdsourced_network",
+    "used": "Geometry, topology and one-way tags of arterial roads; some lane tags. Not an authoritative inventory of controllers or all legal turns."
+  },
+  {
+    "id": "JICA2016",
+    "url": "https://openjicareport.jica.go.jp/pdf/12266391_02.pdf",
+    "type": "historical_official_study",
+    "pages": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      133
+    ],
+    "used": "Historical context and parameter rationale only; not used to calibrate OD or 2026 traffic."
+  },
+  {
+    "id": "WorldPop2020",
+    "url": "https://hub.worldpop.org/geodata/summary?id=6449",
+    "doi": "10.5258/SOTON/WP00645",
+    "type": "modelled_population",
+    "used": "Actual raster clip for density display; optional synthetic origin weighting in the daily viewer, not in the 90-minute experiments."
+  },
+  {
+    "id": "Fleet2025",
+    "url": "https://thanglong.chinhphu.vn/han-che-phuong-tien-ca-nhan-huong-toi-giao-thong-xanh-hien-dai-103250613110302662.htm",
+    "type": "government_news",
+    "used": "Context only: 6.5m motorcycles and 1.1m cars reported June 2025; stock does not identify hourly mode flows."
+  },
+  {
+    "id": "Leeds2022",
+    "url": "https://lida.leeds.ac.uk/research-projects/let-the-data-speak-for-itself-developing-a-new-data-dashboard-for-a-hanoi-transport-survey/",
+    "type": "research_project",
+    "used": "Identifies household travel survey of 26,000 households; no microdata accessed or used."
+  },
+  {
+    "id": "FHWA",
+    "url": "https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter3.htm",
+    "type": "primary_method",
+    "used": "Signal capacity and effective-green framework."
+  },
+  {
+    "id": "Motorcycles2001",
+    "url": "https://doi.org/10.2208/journalip.18.935",
+    "type": "original_research",
+    "used": "Motivation to avoid claiming a constant PCU captures Hanoi mixed traffic."
+  },
+  {
+    "id": "InducedDemand2011",
+    "url": "https://pubs.aeaweb.org/doi/abs/10.1257/aer.101.6.2616",
+    "type": "original_research",
+    "used": "Mechanism context only; no US elasticity transferred to Hanoi."
+  },
+  {
+    "id": "SUMO",
+    "url": "https://sumo.dlr.de/docs/Simulation/SublaneModel.html",
+    "type": "official_documentation",
+    "used": "Recommended future microscopic implementation, not the engine used here."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "errors": [],
+  "loaded": {
+    "daily": 1000,
+    "time": "00:10",
+    "saves": 0,
+    "overflow": false
+  },
+  "after": {
+    "time": "17:10",
+    "saves": 1
+  },
+  "report": {
+    "overflow": false,
+    "brokenImages": 0,
+    "hasCaveat": true
+  }
+}

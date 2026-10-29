@@ -1,0 +1,78 @@
+{
+  "errors": [],
+  "initial": {
+    "metrics": {
+      "t": 90000,
+      "generated": 54000,
+      "completed": 52250,
+      "base_completed": 43594,
+      "inside": 1750,
+      "external": 0,
+      "unfinished": 1750,
+      "total_wait_veh_h": 29255.952092319792,
+      "external_wait_veh_h": 2300.536764771426,
+      "spillback_link_min": 20788.033333333333,
+      "waiting": 1719,
+      "conservation_error": 0,
+      "throughput_veh_h": 2090
+    },
+    "popCells": 1112,
+    "history": 1501,
+    "overflow": false
+  },
+  "at1710": "17:10",
+  "played": "17:18",
+  "overflowMobile": false,
+  "changed": {
+    "options": {
+      "daily": 12000,
+      "motoShare": 0.8,
+      "induction": 0.2,
+      "seed": 42,
+      "profile": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "scenario": "S0",
+      "populationWeighted": true
+    },
+    "metrics": {
+      "t": 90000,
+      "generated": 12000,
+      "completed": 12000,
+      "base_completed": 12000,
+      "inside": 0,
+      "external": 0,
+      "unfinished": 0,
+      "total_wait_veh_h": 256.4971992798032,
+      "external_wait_veh_h": 0.0007258447859850195,
+      "spillback_link_min": 53.2,
+      "waiting": 0,
+      "conservation_error": 0,
+      "throughput_veh_h": 480
+    }
+  },
+  "inputError": "Cần đúng 24 trọng số không âm, có ít nhất một trọng số lớn hơn 0."
+}

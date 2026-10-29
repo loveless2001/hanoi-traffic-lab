@@ -1,0 +1,56 @@
+{
+  "source": "JICA2016",
+  "status": "historical derived analysis, not raw contemporary observations",
+  "table_5_5_1": {
+    "PDF_page": 126,
+    "labels": [
+      "UMRT5–Doi Can",
+      "UMRT5–Van Phuc",
+      "UMRT5–Dao Tan",
+      "UMRT5–Kim Ma",
+      "UMRT5–Huyen Thuc",
+      "UMRT5–Lang",
+      "UMRT5–Nguyen Khang",
+      "UMRT5–Hoang Minh",
+      "UMRT5–Ring Road 3"
+    ]
+  },
+  "table_5_5_2": {
+    "PDF_page": 127,
+    "through_base_pcu_per_green_hour": 2000,
+    "left_base_pcu_per_green_hour": 1800,
+    "right_base_pcu_per_green_hour": 1800,
+    "status": "base assumptions corrected by study, not measured Hanoi saturation rates"
+  },
+  "table_5_5_8": {
+    "PDF_page": 133,
+    "traffic_volume": [
+      6960,
+      4910,
+      7340,
+      9220,
+      8910,
+      7190,
+      4030,
+      7500,
+      9160
+    ],
+    "units": "Table heading does not print the unit. Retained verbatim; NOT used as PCU/h or OD calibration targets.",
+    "case1_capacity": [
+      7020,
+      5980,
+      6640,
+      5940,
+      7940,
+      5970,
+      3940,
+      9000,
+      6210
+    ]
+  },
+  "important_limits": [
+    "Motorcycles were NOT counted in the simplified intersection survey; assumed 3 times car flow.",
+    "Only 1 hour measured at each intersection, corrected using METROS temporal profile.",
+    "Peak share 8.5% at 07:00 is historical contextual evidence, not an observed daily profile in this model."
+  ]
+}

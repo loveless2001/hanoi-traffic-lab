@@ -1,0 +1,29 @@
+MẠNG ĐƯỜNG
+© OpenStreetMap contributors.
+https://www.openstreetmap.org/copyright
+Open Database License 1.0 (ODbL):
+https://opendatacommons.org/licenses/odbl/1-0/
+Mạng rút gọn và snapshot OSM là cơ sở dữ liệu dẫn xuất; giữ ghi công và
+điều kiện chia sẻ tương tự khi phân phối lại theo ODbL.
+
+DÂN CƯ
+WorldPop (University of Southampton and collaborators), population 2020,
+unconstrained individual-country product published in 2018.
+DOI: https://doi.org/10.5258/SOTON/WP00645
+Metadata: https://hub.worldpop.org/geodata/summary?id=6449
+Creative Commons Attribution 4.0 International:
+https://creativecommons.org/licenses/by/4.0/
+Dữ liệu là ước tính mô hình, không phải số đếm dân cư tại từng ô.
+
+JICA
+Báo cáo gốc thuộc quyền của đơn vị xuất bản; không áp giấy phép mã nguồn
+của mô hình cho báo cáo này. Nguồn công khai:
+https://openjicareport.jica.go.jp/pdf/12266391_02.pdf
+Tham khảo trực tiếp báo cáo gốc theo URL; repo không phân phối lại PDF.
+
+D3
+D3 v7.9.0: Copyright 2010-2023 Mike Bostock.
+Giấy phép ISC; thông tin được giữ trong đầu tệp thư viện.
+
+Đường mới, nhu cầu tổng hợp và kết quả là các thí nghiệm, không phải dữ
+liệu quan trắc được công bố bởi các nhà cung cấp nêu trên.

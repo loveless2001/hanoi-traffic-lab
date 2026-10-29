@@ -1,0 +1,160 @@
+[
+  {
+    "name": "Zero demand",
+    "pass_": true,
+    "evidence": {
+      "scenario": "S0",
+      "seed": 42,
+      "config": {
+        "dt": 1,
+        "demand_seconds": 1,
+        "horizon": 600,
+        "demand": 0,
+        "moto_share": 0.8,
+        "moto_pcu": 0.35,
+        "saturation": 600,
+        "storage_pcu_per_lane_km": 140,
+        "cycle": 90,
+        "lost": 14,
+        "induction": 0.2,
+        "access_count": 4,
+        "meter_threshold": 0.65,
+        "seed": 42
+      },
+      "generated": 0,
+      "completed": 0,
+      "base_completed": 0,
+      "completion_pct": 100.0,
+      "throughput_veh_h": 0.0,
+      "external_end": 0,
+      "inside_end": 0,
+      "unfinished": 0,
+      "total_wait_veh_h": 0.0,
+      "external_wait_veh_h": 0.0,
+      "internal_wait_veh_h": 0.0,
+      "wait_per_generated_s": 0,
+      "mean_completed_delay_s": null,
+      "p95_completed_delay_s": null,
+      "total_observed_time_veh_h": 0.0,
+      "spillback_link_min": 0.0,
+      "spillback_pct": 0.0,
+      "full_storage_link_min": 0.0,
+      "peak_external": 0,
+      "peak_waiting": 0,
+      "max_occupancy_ratio": 0.0,
+      "conservation_error": 0,
+      "link_transfers": 0,
+      "turn_transfers": {},
+      "new_link_entries": 0,
+      "mode_stats": {
+        "moto": {
+          "generated": 0,
+          "completed": 0,
+          "unfinished": 0,
+          "mean_completed_trip_s": null,
+          "total_wait_veh_h": 0.0
+        },
+        "car": {
+          "generated": 0,
+          "completed": 0,
+          "unfinished": 0,
+          "mean_completed_trip_s": null,
+          "total_wait_veh_h": 0.0
+        }
+      },
+      "links": 1,
+      "nodes": 2,
+      "signal_junctions": 0,
+      "movement_count": 0,
+      "conflicting_pairs": 0
+    }
+  },
+  {
+    "name": "Analytical isolated saturated link",
+    "pass_": true,
+    "evidence": {
+      "expected": 99,
+      "completed": 99
+    }
+  },
+  {
+    "name": "No loss/overflow under overload",
+    "pass_": true,
+    "evidence": {
+      "generated": 400,
+      "completed": 99,
+      "unfinished": 301,
+      "max_occupancy_ratio": 1.0,
+      "conservation_error": 0
+    }
+  },
+  {
+    "name": "Finite downstream storage causes spillback",
+    "pass_": true,
+    "evidence": {
+      "completed": 10,
+      "spillback_link_min": 8.733333333333333,
+      "external_wait_veh_h": 63.314166666666665,
+      "inside_end": 15
+    }
+  },
+  {
+    "name": "External queue waiting is counted",
+    "pass_": true,
+    "evidence": 63.314166666666665
+  },
+  {
+    "name": "Different mode service and space",
+    "pass_": true,
+    "evidence": {
+      "moto": 282,
+      "car": 99
+    }
+  },
+  {
+    "name": "Crossing movements intersect",
+    "pass_": true,
+    "evidence": true
+  },
+  {
+    "name": "Opposing right-hand straight paths are disjoint",
+    "pass_": true,
+    "evidence": true
+  },
+  {
+    "name": "Common base demand across scenarios",
+    "pass_": true,
+    "evidence": {
+      "base": 250,
+      "extra": 50
+    }
+  },
+  {
+    "name": "Exact reproducibility",
+    "pass_": true,
+    "evidence": {
+      "seed": 42,
+      "completed": 250
+    }
+  },
+  {
+    "name": "Two classes reconcile totals",
+    "pass_": true,
+    "evidence": {
+      "moto": {
+        "generated": 200,
+        "completed": 200,
+        "unfinished": 0,
+        "mean_completed_trip_s": 366.3147942872527,
+        "total_wait_veh_h": 3.8174525158494657
+      },
+      "car": {
+        "generated": 50,
+        "completed": 50,
+        "unfinished": 0,
+        "mean_completed_trip_s": 410.745718964661,
+        "total_wait_veh_h": 1.039104334966398
+      }
+    }
+  }
+]

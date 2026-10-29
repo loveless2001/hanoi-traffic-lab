@@ -1,0 +1,144 @@
+{
+  "errors": [],
+  "noEdit": {
+    "metrics": [
+      {
+        "t": 90000,
+        "generated": 12000,
+        "completed": 12000,
+        "base_completed": 12000,
+        "inside": 0,
+        "external": 0,
+        "unfinished": 0,
+        "total_wait_veh_h": 259.27873765793095,
+        "external_wait_veh_h": 0.0007258447859850195,
+        "spillback_link_min": 82.93333333333334,
+        "waiting": 0,
+        "conservation_error": 0,
+        "throughput_veh_h": 480
+      },
+      {
+        "t": 90000,
+        "generated": 12000,
+        "completed": 12000,
+        "base_completed": 12000,
+        "inside": 0,
+        "external": 0,
+        "unfinished": 0,
+        "total_wait_veh_h": 259.27873765793095,
+        "external_wait_veh_h": 0.0007258447859850195,
+        "spillback_link_min": 82.93333333333334,
+        "waiting": 0,
+        "conservation_error": 0,
+        "throughput_veh_h": 480
+      }
+    ],
+    "sameObjects": true,
+    "fingerprint": "1a6da2be",
+    "usingNewRoad": 0,
+    "movements": [
+      606,
+      606
+    ]
+  },
+  "edited": {
+    "metrics": [
+      {
+        "t": 90000,
+        "generated": 12000,
+        "completed": 12000,
+        "base_completed": 12000,
+        "inside": 0,
+        "external": 0,
+        "unfinished": 0,
+        "total_wait_veh_h": 259.27873765793095,
+        "external_wait_veh_h": 0.0007258447859850195,
+        "spillback_link_min": 82.93333333333334,
+        "waiting": 0,
+        "conservation_error": 0,
+        "throughput_veh_h": 480
+      },
+      {
+        "t": 90000,
+        "generated": 12000,
+        "completed": 12000,
+        "base_completed": 12000,
+        "inside": 0,
+        "external": 0,
+        "unfinished": 0,
+        "total_wait_veh_h": 287.5679741625103,
+        "external_wait_veh_h": 0.07377218243872954,
+        "spillback_link_min": 80.53333333333333,
+        "waiting": 0,
+        "conservation_error": 0,
+        "throughput_veh_h": 480
+      }
+    ],
+    "sameObjects": true,
+    "fingerprint": "1a6da2be",
+    "usingNewRoad": 695,
+    "movements": [
+      606,
+      616
+    ]
+  },
+  "end": "Ngày +1 · 01:00",
+  "played": "08:07",
+  "restored": {
+    "lines": 2,
+    "fingerprint": "1a6da2be"
+  },
+  "overflow": false,
+  "invalid": "Cần đúng 24 trọng số không âm, với tổng lớn hơn 0.",
+  "canvasDeleteAndUndo": true,
+  "staleResultsCleared": true,
+  "polylinePoints": 3,
+  "touchLines": 1,
+  "roadDesign": {
+    "lines": [
+      {
+        "id": "L1",
+        "kind": "road",
+        "lanes": 2,
+        "points": [
+          {
+            "ll": [
+              105.81196,
+              21.0245878
+            ],
+            "ref": "base:726"
+          },
+          {
+            "ll": [
+              105.8017183,
+              21.030129
+            ],
+            "ref": "base:706"
+          }
+        ]
+      },
+      {
+        "id": "L2",
+        "kind": "access",
+        "lanes": 1,
+        "points": [
+          {
+            "ll": [
+              105.806816,
+              21.0273709
+            ],
+            "ref": "design:L1"
+          },
+          {
+            "ll": [
+              105.8068645,
+              21.0276103
+            ],
+            "ref": "base:676"
+          }
+        ]
+      }
+    ],
+    "autoConnect": true
+  }
+}

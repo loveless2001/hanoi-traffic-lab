@@ -1,0 +1,144 @@
+[
+  {
+    "name": "Dynamic routing reproduces every original OD / mode route",
+    "pass": true,
+    "evidence": {
+      "routes": 730
+    }
+  },
+  {
+    "name": "Empty design gives identical simulation",
+    "pass": true,
+    "evidence": {
+      "t": 90000,
+      "generated": 1500,
+      "completed": 1500,
+      "base_completed": 1500,
+      "inside": 0,
+      "external": 0,
+      "unfinished": 0,
+      "total_wait_veh_h": 31.836598238548113,
+      "external_wait_veh_h": 0,
+      "spillback_link_min": 0.26666666666666666,
+      "waiting": 0,
+      "conservation_error": 0,
+      "throughput_veh_h": 60
+    }
+  },
+  {
+    "name": "New route actually enters user-drawn road",
+    "pass": true,
+    "evidence": {
+      "od": {
+        "origin": "13950191233",
+        "destination": "12535836850",
+        "mode": "car",
+        "ratio": 3.8195998469770105,
+        "direct": 1228.9796489764867
+      },
+      "route": [
+        743
+      ],
+      "addedEdges": 2
+    }
+  },
+  {
+    "name": "Original source is immutable",
+    "pass": true,
+    "evidence": true
+  },
+  {
+    "name": "Splitting conserves original road length",
+    "pass": true,
+    "evidence": {
+      "originalLength": 74311.13923412077,
+      "retained": 74311.13923412075
+    }
+  },
+  {
+    "name": "At-grade crossings create explicit junctions",
+    "pass": true,
+    "evidence": {
+      "manual": {
+        "roads": 1,
+        "branches": 0,
+        "addedKm": 1.2289796489764868,
+        "junctions": 2
+      },
+      "automatic": {
+        "roads": 1,
+        "branches": 0,
+        "addedKm": 1.2289796489764868,
+        "junctions": 9
+      }
+    }
+  },
+  {
+    "name": "Branch creates its own directed edges and shared connection",
+    "pass": true,
+    "evidence": {
+      "roads": 1,
+      "branches": 1,
+      "addedKm": 1.2567956435460401,
+      "junctions": 4
+    }
+  },
+  {
+    "name": "Unchanged junctions keep the same id and signal offset after branch edits",
+    "pass": true,
+    "evidence": {
+      "matchingJunctions": 7
+    }
+  },
+  {
+    "name": "Deleting branch removes branch topology",
+    "pass": true,
+    "evidence": [
+      "L2"
+    ]
+  },
+  {
+    "name": "Deleting parent road removes dependent branches",
+    "pass": true,
+    "evidence": [
+      "L1",
+      "L2"
+    ]
+  },
+  {
+    "name": "Both alternatives use the identical trip objects",
+    "pass": true,
+    "evidence": {
+      "count": 1500,
+      "fingerprint": "026aea5a"
+    }
+  },
+  {
+    "name": "Custom model conserves all trips and finite storage",
+    "pass": true,
+    "evidence": {
+      "t": 90000,
+      "generated": 1500,
+      "completed": 1500,
+      "base_completed": 1500,
+      "inside": 0,
+      "external": 0,
+      "unfinished": 0,
+      "total_wait_veh_h": 33.157714697544655,
+      "external_wait_veh_h": 0,
+      "spillback_link_min": 0.26666666666666666,
+      "waiting": 0,
+      "conservation_error": 0,
+      "throughput_veh_h": 60,
+      "maxStorageRatio": 0.9090909090909091
+    }
+  },
+  {
+    "name": "Every compiled link has positive length and capacity",
+    "pass": true,
+    "evidence": {
+      "nodes": 441,
+      "edges": 750
+    }
+  }
+]

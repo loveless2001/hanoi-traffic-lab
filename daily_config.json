@@ -1,0 +1,9 @@
+{
+  "scenario": "S3",
+  "daily": 45000,
+  "motoShare": 0.8,
+  "induction": 0.2,
+  "seed": 42,
+  "populationWeighted": true,
+  "profile": [1,1,1,1,1,2,5,9,8,5,4,4,4,4,4,5,8,10,8,5,4,3,2,1]
+}

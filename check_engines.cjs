@@ -1,0 +1,4 @@
+const fs=require('fs'),path=require('path'),P=__dirname,{Engine}=require('./engine.js');
+const data=JSON.parse(fs.readFileSync(path.join(P,'ui_data.json'),'utf8')),fixtures=JSON.parse(fs.readFileSync(path.join(P,'reference_fixtures.json'),'utf8'));let checks=[];
+for(const [scenario,f] of Object.entries(fixtures)){const engine=new Engine(data,scenario,f.trips,{horizon:5400}),r=engine.runAll(),keys=['completed','base_completed','unfinished','total_wait_veh_h','external_wait_veh_h','spillback_link_min'],diffs={};for(const k of keys){diffs[k]=r[k]-f.expected[k];if(Math.abs(diffs[k])>1e-6)throw Error(scenario+' '+k+' differs.');}if(r.conservation_error)throw Error('Conservation failed.');checks.push({scenario,diffs});console.log(scenario,'PASS');}
+fs.writeFileSync(path.join(P,'cross_language_checks.json'),JSON.stringify(checks,null,2));

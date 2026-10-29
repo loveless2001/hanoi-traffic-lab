@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+work/
+.env
+.env.*
+*.log
+*.zip
+paired_result.json
+example_90min.json
+.DS_Store

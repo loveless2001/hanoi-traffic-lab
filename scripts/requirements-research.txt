@@ -1,0 +1,5 @@
+networkx>=3.4
+numpy>=2.0
+matplotlib>=3.9
+# rasterio is needed only to change the raster crop, not to run the model.
+rasterio>=1.4

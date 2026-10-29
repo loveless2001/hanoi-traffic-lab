@@ -1,0 +1,42 @@
+<div id="hanoi-road-compare">
+  <h3>Vẽ đường · so sánh cùng nhu cầu</h3>
+  <div class="text-small text-muted">Mạng OSM · dân cư WorldPop 2020 · mô phỏng thử nghiệm, chưa hiệu chỉnh thực địa</div>
+  <div class="viz-controls">
+    <label class="form-label">Chuyến giả định / ngày<input class="form-control hn-config" id="hc-daily" type="number" min="1000" max="200000" step="1000" value="45000"></label>
+    <label class="form-label">Phân bố thời gian<select class="form-select hn-config" id="hc-profile"><option value="commute">Hai cao điểm sáng / chiều</option><option value="flat">Đều trong 24 giờ</option><option value="morning">Tập trung buổi sáng</option><option value="custom">Tự nhập 24 trọng số</option></select></label>
+    <button class="btn btn-primary" type="button" id="hc-run">So sánh hai phương án</button>
+  </div>
+  <details id="hc-settings"><summary>Chỉnh xe máy / ô tô và phân bố theo giờ</summary>
+    <div class="viz-controls"><label class="form-label">Xe máy (%)<input class="form-control hn-config" id="hc-moto" type="number" min="0" max="100" value="80"></label><label class="form-label">Hạt giống ngẫu nhiên<input class="form-control hn-config" id="hc-seed" type="number" min="1" max="999999" value="42"></label></div>
+    <label class="form-check"><input class="form-check-input hn-config" id="hc-weighted" type="checkbox" checked><span class="form-check-label">Điểm đi theo dân cư (giả định)</span></label>
+    <label class="form-label" for="hc-weights">24 trọng số từ 00h đến 23h; tự chuẩn hóa về 100%</label><textarea class="form-control hn-config" id="hc-weights" rows="2">1 1 1 1 1 2 5 9 8 5 4 4 4 4 4 5 8 10 8 5 4 3 2 1</textarea>
+  </details>
+  <div class="viz-row hc-editor-tools" role="group" aria-label="Công cụ vẽ trên bản đồ phương án">
+    <button class="btn hn-tool" type="button" data-tool="view" aria-pressed="true">Xem / kéo</button><button class="btn hn-tool" type="button" data-tool="road" aria-pressed="false">Vẽ đường</button><button class="btn hn-tool" type="button" data-tool="access" aria-pressed="false">Thêm nhánh</button><button class="btn hn-tool" type="button" data-tool="delete" aria-pressed="false">Xóa tuyến</button>
+    <button class="btn hn-tool" type="button" id="hc-undo" disabled>Hoàn tác</button><button class="btn hn-tool" type="button" id="hc-cancel" disabled>Hủy nét</button>
+    <label class="form-label">Làn / chiều<select class="form-select hn-config" id="hc-lanes"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option></select></label>
+  </div>
+  <div class="viz-row hc-map-options"><label class="form-check"><input class="form-check-input hn-config" id="hc-crossings" type="checkbox" checked><span class="form-check-label">Nối các giao cắt mới cùng mức</span></label><label class="form-check"><input class="form-check-input" id="hc-pop" type="checkbox" checked><span class="form-check-label">Dân cư</span></label><button class="btn" type="button" id="hc-zoom-in" aria-label="Phóng to hai bản đồ">+</button><button class="btn" type="button" id="hc-zoom-out" aria-label="Thu nhỏ hai bản đồ">−</button><button class="btn" type="button" id="hc-fit">Toàn vùng</button></div>
+  <div id="hc-hint" class="text-small" aria-live="polite">Vẽ ở bản đồ bên phải; hai đầu tuyến bắt vào đường có sẵn.</div><div id="hc-error" class="text-destructive" role="alert" hidden></div>
+  <div class="hc-maps">
+    <section class="hc-map-panel"><div class="hc-map-title"><strong>Hiện trạng</strong><span class="text-small" id="hc-inventory-a">Mạng đường gốc</span></div><canvas id="hc-map-a" role="img" aria-label="Hiện trạng giao thông trên mạng đường gốc, đồng bộ thời gian với phương án"></canvas></section>
+    <section class="hc-map-panel"><div class="hc-map-title"><strong>Phương án tự vẽ</strong><span class="text-small" id="hc-inventory-b">Chưa có tuyến mới</span></div><canvas class="cursor-interaction" id="hc-map-b" role="img" aria-label="Bản đồ chỉnh sửa: chọn Vẽ đường hoặc Thêm nhánh, rồi chấm điểm đầu, các điểm giữa và điểm cuối trên đường có sẵn"></canvas></section>
+  </div>
+  <div class="viz-row text-small hc-legend"><span><span class="hc-swatch" data-color="1"></span>Đang lưu thông</span><span><span class="hc-swatch" data-color="3"></span>Gần đầy</span><span><span class="hc-swatch" data-color="5"></span>Đường / nhánh tự vẽ</span><span>● xe máy · ■ ô tô · × spillback</span></div>
+  <div class="text-small text-muted">Dân cư: ô ~100 m · nhạt 0 → đậm ≥80.000 người/km² · giao lộ mới giả định đèn 90 giây</div>
+  <details id="hc-lines"><summary id="hc-lines-title">Các tuyến đã vẽ (0)</summary><div id="hc-line-list" class="hc-line-list"></div></details>
+  <div class="viz-row hc-playback"><button class="btn" type="button" id="hc-play" disabled>Phát</button><label class="form-label">Tốc độ<select class="form-select" id="hc-speed"><option value="10">10 phút / giây</option><option value="30" selected>30 phút / giây</option><option value="90">90 phút / giây</option></select></label><strong id="hc-time">00:00</strong><button class="btn" type="button" id="hc-end" disabled>Cuối kỳ</button></div>
+  <label class="sr-only" for="hc-timeline">Giờ chung của hai phương án</label><input class="form-range" id="hc-timeline" type="range" min="0" max="1500" step="1" value="0" disabled>
+  <div class="text-small" id="hc-status" aria-live="polite">Hai phương án dùng đúng cùng điểm đi–đến, giờ xuất phát và loại xe; không cộng nhu cầu phát sinh.</div>
+  <div class="table-responsive"><table class="table table-sm"><caption id="hc-comparison-title">Chưa chạy so sánh</caption><thead><tr><th>Chỉ số</th><th class="text-end">Hiện trạng</th><th class="text-end">Phương án</th><th class="text-end">Chênh lệch</th></tr></thead><tbody id="hc-metrics"></tbody></table></div>
+  <svg id="hc-demand-chart" role="img" aria-label="Tỷ trọng nhu cầu chung theo từng giờ trong ngày"></svg>
+  <div class="text-small text-muted">24 giờ phát sinh + 1 giờ xả · tính cả xe chờ ngoài mạng · vị trí chấm xe là minh họa · © OpenStreetMap contributors / WorldPop</div>
+</div>
+<style>
+#hanoi-road-compare .hc-editor-tools{margin-top:14px}#hanoi-road-compare .hc-map-options{margin-top:10px}#hanoi-road-compare #hc-hint{margin:10px 0}#hanoi-road-compare #hc-error{margin:8px 0}#hanoi-road-compare .hc-maps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}#hanoi-road-compare .hc-map-panel{min-width:0}#hanoi-road-compare .hc-map-title{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px;margin:6px 0}#hanoi-road-compare canvas{display:block;width:100%;touch-action:none}#hanoi-road-compare .hc-legend{gap:12px;margin:10px 0 4px}#hanoi-road-compare .hc-swatch{display:inline-block;width:18px;height:3px;margin-right:5px;vertical-align:middle}#hanoi-road-compare #hc-settings{margin:10px 0}#hanoi-road-compare #hc-lines{margin-top:10px}#hanoi-road-compare .hc-line-list{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}#hanoi-road-compare .hc-playback{margin-top:12px}#hanoi-road-compare #hc-status{margin:8px 0}#hanoi-road-compare #hc-demand-chart{display:block;width:100%;height:145px;margin:12px 0}@media(max-width:650px){#hanoi-road-compare .hc-maps{grid-template-columns:minmax(0,1fr);gap:12px}}
+</style>
+<script type="application/json" id="hc-data">__NETWORK_DATA__</script>
+<script type="application/json" id="hc-pop-data">__POPULATION_DATA__</script>
+<script>__ENGINE_CODE__</script>
+<script>__EDITOR_CODE__</script>
+<script>__VIEWER_CODE__</script>

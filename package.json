@@ -1,0 +1,13 @@
+{
+  "name": "hanoi-traffic-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Editable Hanoi traffic network with paired fixed-demand simulation",
+  "license": "MIT",
+  "scripts": {
+    "build": "python scripts/build_site.py",
+    "test": "node check_engines.cjs && node check_editor.cjs",
+    "test:python": "python check_model.py",
+    "serve": "python -m http.server 8765 --bind 127.0.0.1"
+  }
+}
