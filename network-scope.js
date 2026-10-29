@@ -33,5 +33,5 @@ function prepare(data,drawingNets,trips,options){
  return {trips:projection.trips,nets:filtered.map(x=>x.net),edgeMaps:filtered.map(x=>x.edgeMap),scope:{filtered:!!filtered[0].edgeMap,detail,linkCounts:filtered.map(x=>x.net.edges.length),removedLinkCounts:filtered.map((x,i)=>drawingNets[i].edges.length-x.net.edges.length),projection:projection.projection}};
 }
 function mapSnapshot(snapshot,edgeMap){if(!edgeMap)return snapshot;const ratios={};for(const [id,value] of Object.entries(snapshot.ratios))if(value)ratios[edgeMap[Number(id)]]=value;snapshot.ratios=ratios;snapshot.dots=snapshot.dots.map(d=>[edgeMap[d[0]],...d.slice(1)]);snapshot.blocked=snapshot.blocked.map(id=>edgeMap[id]);return snapshot;}
-const api={visible,filter,projectDemand,prepare,mapSnapshot};if(typeof module!=='undefined'&&module.exports)module.exports=api;global.HanoiScope=api;
+const api={visible,filter,projectDemand,prepare,mapSnapshot,largestComponent};if(typeof module!=='undefined'&&module.exports)module.exports=api;global.HanoiScope=api;
 })(typeof window==='undefined'?globalThis:window);

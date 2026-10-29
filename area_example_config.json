@@ -1,0 +1,42 @@
+{
+  "daily": 1000,
+  "motoShare": 0.8,
+  "seed": 42,
+  "profile": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    5,
+    9,
+    8,
+    5,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    8,
+    10,
+    8,
+    5,
+    4,
+    3,
+    2,
+    1
+  ],
+  "populationWeighted": true,
+  "simulateVisibleOnly": true,
+  "scenario": "S0",
+  "induction": 0,
+  "areaBBox": [
+    105.8,
+    21.01,
+    105.84,
+    21.04
+  ],
+  "roadDetail": "no-small"
+}

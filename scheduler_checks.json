@@ -9,7 +9,7 @@
       "external_wait_veh_h": 5.684341886080802e-14,
       "spillback_link_min": 0
     },
-    "seconds": 0.334
+    "seconds": 0.633
   },
   {
     "scenario": "S2",
@@ -21,7 +21,7 @@
       "external_wait_veh_h": -8.526512829121202e-14,
       "spillback_link_min": 0
     },
-    "seconds": 0.277
+    "seconds": 0.52
   },
   {
     "scenario": "S3",
@@ -33,6 +33,6 @@
       "external_wait_veh_h": 2.2737367544323206e-13,
       "spillback_link_min": 0
     },
-    "seconds": 0.315
+    "seconds": 0.612
   }
 ]

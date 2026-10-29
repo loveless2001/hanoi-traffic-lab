@@ -1,0 +1,110 @@
+{
+  "testedAt": "2026-10-29",
+  "desktop": {
+    "url": "http://127.0.0.1:8766/",
+    "passed": true,
+    "errors": [],
+    "selected": [
+      105.8,
+      21.01,
+      105.84,
+      21.04
+    ],
+    "result": {
+      "scope": {
+        "filtered": true,
+        "detail": "no-small",
+        "area": [
+          105.8,
+          21.01,
+          105.84,
+          21.04
+        ],
+        "areaStats": {
+          "km2": 13.880919741607908,
+          "originPortals": 41,
+          "destinationPortals": 41,
+          "boundaryOrigins": 16,
+          "boundaryDestinations": 16,
+          "coreNodes": 823,
+          "populationCells": 221,
+          "minTripMeters": 799.7842267987807
+        },
+        "linkCounts": [
+          1465,
+          1465
+        ],
+        "removedLinkCounts": [
+          139253,
+          139253
+        ],
+        "projection": {
+          "assignments": [],
+          "remappedPortals": 0,
+          "maxShiftMeters": 0,
+          "meanShiftMeters": 0
+        }
+      },
+      "paired": true,
+      "count": 1000,
+      "metrics": [
+        {
+          "t": 90000,
+          "boundary_in": 391,
+          "boundary_out": 412,
+          "generated": 1000,
+          "completed": 1000,
+          "base_completed": 1000,
+          "inside": 0,
+          "external": 0,
+          "unfinished": 0,
+          "total_wait_veh_h": 25.823421913342294,
+          "external_wait_veh_h": 0,
+          "spillback_link_min": 0.13333333333333333,
+          "waiting": 0,
+          "conservation_error": 0,
+          "throughput_veh_h": 40
+        },
+        {
+          "t": 90000,
+          "boundary_in": 391,
+          "boundary_out": 412,
+          "generated": 1000,
+          "completed": 1000,
+          "base_completed": 1000,
+          "inside": 0,
+          "external": 0,
+          "unfinished": 0,
+          "total_wait_veh_h": 25.823421913342294,
+          "external_wait_veh_h": 0,
+          "spillback_link_min": 0.13333333333333333,
+          "waiting": 0,
+          "conservation_error": 0,
+          "throughput_veh_h": 40
+        }
+      ],
+      "error": ""
+    },
+    "checks": [
+      "Physical drag creates geographic rectangle",
+      "Zoom and synchronized masks",
+      "Local worker simulation has shared demand and boundary flow",
+      "Tiny rectangle rejected without losing result",
+      "Changing rectangle invalidates result",
+      "Area persists and stays separate per map region",
+      "Clear selection restores whole map",
+      "Mobile dark layout"
+    ]
+  },
+  "touch": {
+    "passed": true,
+    "area": [
+      105.8,
+      21.01,
+      105.84,
+      21.04
+    ],
+    "errors": [],
+    "touchEvents": true
+  }
+}

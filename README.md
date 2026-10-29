@@ -19,6 +19,25 @@ Khung phủ khoảng 752 km² là diện tích cả dải đệm, không phải 
 đa giác chính thức của Vành đai 3. Phóng to để chỉnh sửa đường địa phương.
 Thiết kế của từng vùng được lưu riêng trong trình duyệt.
 
+**Chọn vùng ▭**: kéo một hình chữ nhật trên bản đồ phải để chỉ mô phỏng trong
+khung đó. Khung áp dụng cho cả hai phương án và tự phóng tới vùng chọn.
+**Phóng vùng chọn** đưa khung về giữa màn hình; **Bỏ vùng chọn** trở về toàn
+bản đồ. Vùng cần rộng và cao ít nhất 250 m. Có thể dùng chuột hoặc cảm ứng;
+Esc hủy nét khung đang kéo. Vùng được lưu riêng cho từng phạm vi bản đồ.
+
+Khi có khung, số chuyến/ngày áp dụng **riêng cho vùng chọn**. Tạo điểm đi–đến
+trong vùng và cửa vào/ra tại những đường bị cắt bởi ranh, từ mạng hiện trạng
+sau lọc. Hai phương án dùng đúng cùng tập chuyến địa phương này. Đây là nhu
+cầu giả định mới của vùng, không phải lấy số xe thực đo từ mô phỏng toàn Hà
+Nội. Hình học và dung tích đoạn đường được cắt tại ranh; không cho đường đi
+vòng ra ngoài khung. Xe chờ chưa vào được mạng vẫn tính vào xe chưa hoàn thành.
+Bảng có thêm xe vào/ra qua ranh và lưu lượng ra qua ranh trong 15 phút.
+
+Trong chế độ vùng, đường/nhánh tự vẽ cũng bị giới hạn bởi khung. Đường đã vẽ
+ở ngoài vẫn được lưu, chỉ phần bên trong tham gia tính toán. Vẽ mới chỉ bắt
+điểm trong vùng chọn; bỏ khung để vẽ ngoài ranh. Mở lại cùng khung để so sánh
+các phương án với cùng giả định biên và nhu cầu.
+
 **Chi tiết đường** mặc định là **Ẩn đường ngõ**: ẩn residential, living_street
 và unclassified theo phân loại OSM; **Chỉ trục chính** ẩn thêm tertiary;
 **Hiện tất cả** khôi phục toàn mạng trên bản đồ. Các đường nối `_link` của
@@ -90,6 +109,7 @@ Commit và push `main` để GitHub Pages cập nhật từ thư mục gốc c�
 | `engine.js` | Động cơ hàng đợi hữu hạn, hai loại xe |
 | `simulation-worker.js` | Chạy cặp mô phỏng ngoài luồng giao diện |
 | `network-scope.js` | Lọc lớp đường, gán điểm đi–đến dùng chung, ánh xạ xe về bản đồ |
+| `area-scope.js` | Cắt mạng theo hình chữ nhật, cửa cắt biên và nhu cầu địa phương |
 | `regions/inside-ring3.json`, `.json.gz` | Mạng mở rộng, lớp dân cư ~300 m, nước và điểm đi–đến |
 | `data/rr3_*` | Snapshot OSM, raster dân cư gốc đã cắt, nguồn và hàm băm |
 | `scripts/build_rr3.py` | Dựng lại mạng lớn và cộng dân cư 3×3 ô |
@@ -118,6 +138,7 @@ hiển thị và trọng số điểm đi; điểm đến còn ngẫu nhiên, ch
 ```sh
 node check_rr3.cjs
 node check_scope.cjs
+node check_area.cjs
 ```
 
 Kiểm tra này dùng 45.000 chuyến cho hiện trạng và phương án đường + nhánh
@@ -129,6 +150,16 @@ Dựng lại dữ liệu đã đóng gói (cần Python, networkx, numpy, raster
 python scripts/build_rr3.py --source data/rr3_osm_snapshot.json.gz --population data/rr3_worldpop_2020_clip.tif
 python scripts/build_site.py
 ```
+
+Ví dụ chạy lại cặp phương án cục bộ đã dùng trong kiểm tra:
+
+```sh
+node run_comparison.cjs area_example_design.json area_example_config.json area_result.json regions/inside-ring3.json
+```
+
+JSON cấu hình dùng `areaBBox: [west, south, east, north]`; để `null` hoặc bỏ
+trường này để chạy toàn phạm vi. `area_model_checks.json` ghi nhu cầu biên,
+số chuyến và các bộ đếm cho mỗi mức lọc.
 
 `scripts/extract_rr3.py` (cần osmium) có thể trích lại snapshot từ PBF Vietnam
 đúng ngày; URL và SHA-256 của PBF nằm trong `data/rr3_provenance.json`.

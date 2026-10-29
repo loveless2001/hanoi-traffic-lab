@@ -11,6 +11,8 @@
     "pass": true,
     "evidence": {
       "t": 90000,
+      "boundary_in": 0,
+      "boundary_out": 0,
       "generated": 1500,
       "completed": 1500,
       "base_completed": 1500,
@@ -118,6 +120,8 @@
     "pass": true,
     "evidence": {
       "t": 90000,
+      "boundary_in": 0,
+      "boundary_out": 0,
       "generated": 1500,
       "completed": 1500,
       "base_completed": 1500,

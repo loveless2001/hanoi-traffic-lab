@@ -11,8 +11,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 101,
-      "sha256": "9562ca95e850d2fb046c6924a4c1a2198a51e91035c93b7d59c14ac9738499ee"
+      "bytes": 119,
+      "sha256": "3e167358f733359f04c68795b5f757994491338a563be7b4daaf22e5386370a9"
     },
     {
       "path": ".nojekyll",
@@ -20,9 +20,39 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "area-scope.js",
+      "bytes": 10213,
+      "sha256": "3da273138e0aef9718477f2372a0a02de5bc4b5eeeb3bd59ca556647172d0928"
+    },
+    {
+      "path": "area_browser_checks.json",
+      "bytes": 2675,
+      "sha256": "1bb37a4004a44161b17e67a81135585989be99c901e35b71524fbedad03ed957"
+    },
+    {
+      "path": "area_example_config.json",
+      "bytes": 433,
+      "sha256": "44c818a4e724b1bd7b6de183194247cc6a38019b915c946e5cb0c4b1ede25fdc"
+    },
+    {
+      "path": "area_example_design.json",
+      "bytes": 457,
+      "sha256": "49445214e4d227df7a554d97e3ac09a557d18cc4bd4f19205c29b033234f116b"
+    },
+    {
+      "path": "area_model_checks.json",
+      "bytes": 13312,
+      "sha256": "e71bf6c11ea6d325cfd1eb8721aed1b2735b549c7fd69608bf96a1a7ae362df9"
+    },
+    {
       "path": "browser_checks.json",
       "bytes": 1580,
       "sha256": "50790a2359edfe6976e71f199ce8ab3e33efba7238c91b7c185625c258c73d28"
+    },
+    {
+      "path": "check_area.cjs",
+      "bytes": 8321,
+      "sha256": "55118329c2ce74c1ca3df39872e62eb2dfccca3dc1bc4ed8566c3f97dec9d4e6"
     },
     {
       "path": "check_crossings.cjs",
@@ -131,13 +161,13 @@
     },
     {
       "path": "editor_model_checks.json",
-      "bytes": 3137,
-      "sha256": "e208c180480e21650571cbeb1f4f11043c8fe5f5019e366e4c885fefa7f81e3c"
+      "bytes": 3235,
+      "sha256": "20520121569ce198ce54548fbec76b8b6e98d0f5e6e7498e9e8a0eac580bd451"
     },
     {
       "path": "engine.js",
-      "bytes": 13053,
-      "sha256": "7ac78b02bbdf3a3a94229d94ae5dd426e8ed87a6eae7d27e50ca78905a527baf"
+      "bytes": 13678,
+      "sha256": "c4aba6f796a4c6d2678e8e5e3066f68ff724f5beb53942463ae69087f6abc1ca"
     },
     {
       "path": "experiment.py",
@@ -151,8 +181,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 952847,
-      "sha256": "aa1ced521a256a938ccdee0f7e6c0128e9e9cddb5e4212d5d3a23e9aac22bed4"
+      "bytes": 981590,
+      "sha256": "0fda0f664affff14cbd9190ddebd99e7c10bfedc7ac89633be67254342960667"
     },
     {
       "path": "LICENSE",
@@ -171,8 +201,8 @@
     },
     {
       "path": "network-scope.js",
-      "bytes": 5065,
-      "sha256": "d076265bd8d114ad1ad42a793107ba24ad7cd00173fef456fcd64d203e60c665"
+      "bytes": 5082,
+      "sha256": "9e5d2b267149ac3c9b688d2b096666fe3b93ac67b5f400aed44dd496c68cac7b"
     },
     {
       "path": "network_base.geojson",
@@ -191,8 +221,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 549,
-      "sha256": "f70df8bb90c4e4a70362ec839d1f3bc1891904c5de48a327d43fab056a481012"
+      "bytes": 589,
+      "sha256": "fd7fe891cf250aa6210d42c0e8d94b7bb4a86c3edc9e91fcec12e7db710c4107"
     },
     {
       "path": "paired_example_config.json",
@@ -221,8 +251,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10490,
-      "sha256": "b007f28ccb8379a81b469b0fefa28ece88ab6c10904e42494af6ec9980f1a369"
+      "bytes": 12633,
+      "sha256": "498e4c4e37363a896f40073fcaaadad3859d1ac337c35fbee80cf50c06788440"
     },
     {
       "path": "README.txt",
@@ -236,8 +266,8 @@
     },
     {
       "path": "region-report.html",
-      "bytes": 11211,
-      "sha256": "3943997e1de0dc5545417441d261eba7cfd352cf6fe172f9c1c8a6b26fa99785"
+      "bytes": 14655,
+      "sha256": "4ec895d87b80d0638e5b84e2887eeb335a6590d39967ebe4a8151845f22bfd63"
     },
     {
       "path": "regions/inside-ring3-stats.json",
@@ -286,8 +316,8 @@
     },
     {
       "path": "run_comparison.cjs",
-      "bytes": 2232,
-      "sha256": "0044df28f7fe57cb4dc6c578d28a23c3666918e786072377aefe719e16c5b7a6"
+      "bytes": 2405,
+      "sha256": "be5f54d6c43d2bda17c0f410ab98d6c328c75472e6ccc5da3e74e0d965546960"
     },
     {
       "path": "run_daily.cjs",
@@ -296,8 +326,8 @@
     },
     {
       "path": "scheduler_checks.json",
-      "bytes": 837,
-      "sha256": "dbc6362f3ba53d42d80b426863a4b48825a025edd08a365190f9f7759e969462"
+      "bytes": 836,
+      "sha256": "52822f507be37f29c0ec9405aa4fea2e448a322a54b347d3e957b1fd29f0766c"
     },
     {
       "path": "scope_browser_checks.json",
@@ -306,8 +336,8 @@
     },
     {
       "path": "scope_model_checks.json",
-      "bytes": 56030,
-      "sha256": "7636603213e6e51ffc578bd723449cbb0bb918b1e177cc91f38bcde773eb439a"
+      "bytes": 56502,
+      "sha256": "cabb4feab97c6532655fe3ec6ce7a8164d42fc651b81f0e4dfc3ae19efe31a85"
     },
     {
       "path": "scripts/build_network.py",
@@ -326,13 +356,13 @@
     },
     {
       "path": "scripts/build_rr3_report.py",
-      "bytes": 12048,
-      "sha256": "28f778b911ab4b4edfd9ee610607c5aae7e6e7c81e800d01ae23ebc2ecae37b5"
+      "bytes": 15492,
+      "sha256": "7ed78d615b61aec67f70ddfdf8a77e2b06246ea8220cf7daec5bc83231a5ce08"
     },
     {
       "path": "scripts/build_site.py",
-      "bytes": 6558,
-      "sha256": "f5b372419d14bd82451ac237caf4ebbea13776173bb7aed62fa9f46269e7794f"
+      "bytes": 6610,
+      "sha256": "20af84166049a6bf6b9ef837dcfd8119bd3cabb9deb6d567e343eea4a0e021ee"
     },
     {
       "path": "scripts/export_ui.py",
@@ -351,13 +381,13 @@
     },
     {
       "path": "scripts/simulator-fragment.html",
-      "bytes": 9358,
-      "sha256": "3fe1030544bf7667bbd9d72387862ddf5e4a86ad788c84afae6bedb0f9a5d6a4"
+      "bytes": 10171,
+      "sha256": "13cf4436842fbebf9abbeff27ca66efb2e0eb0978be0a623c1af407099eb949b"
     },
     {
       "path": "simulation-worker.js",
-      "bytes": 1990,
-      "sha256": "7d72b048970ca9563560f92edc3403329800ac78f4258fbce40d5b8bc6dbaf0a"
+      "bytes": 2231,
+      "sha256": "37d5de3382db8a9751e95fffdc0a950eab44acb8519420507a5e525bda20e47c"
     },
     {
       "path": "simulation.py",
@@ -366,8 +396,8 @@
     },
     {
       "path": "simulator.html",
-      "bytes": 952847,
-      "sha256": "aa1ced521a256a938ccdee0f7e6c0128e9e9cddb5e4212d5d3a23e9aac22bed4"
+      "bytes": 981590,
+      "sha256": "0fda0f664affff14cbd9190ddebd99e7c10bfedc7ac89633be67254342960667"
     },
     {
       "path": "sources.json",
@@ -401,8 +431,8 @@
     },
     {
       "path": "viewer.js",
-      "bytes": 32316,
-      "sha256": "bf05828d6d02fb4cdf698281c31da8e47c78c35478263ebf83d5b0e24e724b8b"
+      "bytes": 38307,
+      "sha256": "9ab6c6f248cfabeecc903c15d77544f0798445ac3a0595eff7c6a620d54039f1"
     }
   ]
 }

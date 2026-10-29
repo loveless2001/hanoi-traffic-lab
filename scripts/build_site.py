@@ -3,8 +3,8 @@ import json,argparse
 ROOT=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser();parser.add_argument('--model-dir',type=Path,default=ROOT);parser.add_argument('--fragment',type=Path,default=ROOT/'scripts/simulator-fragment.html');parser.add_argument('--d3',type=Path,default=ROOT/'vendor/d3.min.js');parser.add_argument('--inline-path',type=Path,default=ROOT/'work/preview-fragment.html');args=parser.parse_args();P=args.model_dir
 frag=args.fragment.read_text(encoding='utf-8')
-for key,p in [('__NETWORK_DATA__',P/'ui_data.json'),('__POPULATION_DATA__',P/'population.json'),('__ENGINE_CODE__',P/'engine.js'),('__EDITOR_CODE__',P/'editor.js'),('__SCOPE_CODE__',P/'network-scope.js'),('__VIEWER_CODE__',P/'viewer.js')]:frag=frag.replace(key,p.read_text(encoding='utf-8').replace('</script',r'<\/script'))
-worker='\n'.join((P/name).read_text(encoding='utf-8') for name in ['engine.js','editor.js','network-scope.js','simulation-worker.js'])
+for key,p in [('__NETWORK_DATA__',P/'ui_data.json'),('__POPULATION_DATA__',P/'population.json'),('__ENGINE_CODE__',P/'engine.js'),('__EDITOR_CODE__',P/'editor.js'),('__SCOPE_CODE__',P/'network-scope.js'),('__AREA_CODE__',P/'area-scope.js'),('__VIEWER_CODE__',P/'viewer.js')]:frag=frag.replace(key,p.read_text(encoding='utf-8').replace('</script',r'<\/script'))
+worker='\n'.join((P/name).read_text(encoding='utf-8') for name in ['engine.js','editor.js','network-scope.js','area-scope.js','simulation-worker.js'])
 frag=frag.replace('__WORKER_CODE__',worker.replace('</script',r'<\/script'))
 dest=args.inline_path
 dest.parent.mkdir(parents=True,exist_ok=True)

@@ -1,0 +1,545 @@
+{
+  "calibrated": false,
+  "checks": [
+    {
+      "name": "Road with both endpoints outside is clipped to actual crossing",
+      "passed": true
+    },
+    {
+      "name": "Leaving and reentering creates separate interior pieces",
+      "passed": true
+    },
+    {
+      "name": "Reverse directions share boundary gates without an outside bypass",
+      "passed": true
+    },
+    {
+      "name": "Original nodes exactly on rectangle border count as gates",
+      "passed": true
+    },
+    {
+      "name": "Clipped vehicle positions and repeated source edges map correctly",
+      "passed": true
+    },
+    {
+      "name": "Tiny rectangles rejected before calculation",
+      "passed": true
+    },
+    {
+      "name": "Drawing a road exactly at a boundary gate preserves physical entry and shared demand",
+      "passed": true,
+      "detail": {
+        "aliases": [
+          0,
+          1
+        ],
+        "metrics": {
+          "t": 90000,
+          "boundary_in": 391,
+          "boundary_out": 412,
+          "generated": 1000,
+          "completed": 1000,
+          "base_completed": 1000,
+          "inside": 0,
+          "external": 0,
+          "unfinished": 0,
+          "total_wait_veh_h": 25.28270908848561,
+          "external_wait_veh_h": 0,
+          "spillback_link_min": 0.13333333333333333,
+          "waiting": 0,
+          "conservation_error": 0,
+          "throughput_veh_h": 40
+        }
+      }
+    },
+    {
+      "name": "no-small: all modeled geometry and graph nodes stay inside rectangle",
+      "passed": true
+    },
+    {
+      "name": "no-small: local demand uses shared baseline anchors and same trip objects",
+      "passed": true,
+      "detail": {
+        "km2": 13.880919741607908,
+        "originPortals": 41,
+        "destinationPortals": 41,
+        "boundaryOrigins": 16,
+        "boundaryDestinations": 16,
+        "coreNodes": 823,
+        "populationCells": 221,
+        "minTripMeters": 799.7842267987807
+      }
+    },
+    {
+      "name": "no-small: modes have valid local routes with no excluded classes",
+      "passed": true
+    },
+    {
+      "name": "no-small: finite storage and complete vehicle accounting",
+      "passed": true,
+      "detail": {
+        "metrics": [
+          {
+            "t": 90000,
+            "boundary_in": 391,
+            "boundary_out": 412,
+            "generated": 1000,
+            "completed": 1000,
+            "base_completed": 1000,
+            "inside": 0,
+            "external": 0,
+            "unfinished": 0,
+            "total_wait_veh_h": 25.823421913342294,
+            "external_wait_veh_h": 0,
+            "spillback_link_min": 0.13333333333333333,
+            "waiting": 0,
+            "conservation_error": 0,
+            "throughput_veh_h": 40
+          },
+          {
+            "t": 90000,
+            "boundary_in": 391,
+            "boundary_out": 412,
+            "generated": 1000,
+            "completed": 1000,
+            "base_completed": 1000,
+            "inside": 0,
+            "external": 0,
+            "unfinished": 0,
+            "total_wait_veh_h": 26.751309228302496,
+            "external_wait_veh_h": 0,
+            "spillback_link_min": 0.2,
+            "waiting": 0,
+            "conservation_error": 0,
+            "throughput_veh_h": 40
+          }
+        ],
+        "peak": 0.9090909090909091
+      }
+    },
+    {
+      "name": "no-small: boundary counters match actual admissions and completions",
+      "passed": true
+    },
+    {
+      "name": "no-small: visible vehicle positions stay inside region",
+      "passed": true
+    },
+    {
+      "name": "no-small: drawn road is used in local simulation",
+      "passed": true,
+      "detail": {
+        "usingNewRoad": 118
+      }
+    },
+    {
+      "name": "Congested local model retains outside and unfinished trips",
+      "passed": true,
+      "detail": {
+        "t": 600,
+        "boundary_in": 5,
+        "boundary_out": 0,
+        "generated": 100,
+        "completed": 1,
+        "base_completed": 1,
+        "inside": 4,
+        "external": 95,
+        "unfinished": 99,
+        "total_wait_veh_h": 16.3817886586658,
+        "external_wait_veh_h": 16.14666666666667,
+        "spillback_link_min": 0,
+        "waiting": 3,
+        "conservation_error": 0,
+        "throughput_veh_h": 6
+      }
+    },
+    {
+      "name": "arterial: all modeled geometry and graph nodes stay inside rectangle",
+      "passed": true
+    },
+    {
+      "name": "arterial: local demand uses shared baseline anchors and same trip objects",
+      "passed": true,
+      "detail": {
+        "km2": 13.880919741607908,
+        "originPortals": 40,
+        "destinationPortals": 39,
+        "boundaryOrigins": 15,
+        "boundaryDestinations": 14,
+        "coreNodes": 650,
+        "populationCells": 221,
+        "minTripMeters": 799.7842267987807
+      }
+    },
+    {
+      "name": "arterial: modes have valid local routes with no excluded classes",
+      "passed": true
+    },
+    {
+      "name": "arterial: finite storage and complete vehicle accounting",
+      "passed": true,
+      "detail": {
+        "metrics": [
+          {
+            "t": 90000,
+            "boundary_in": 371,
+            "boundary_out": 382,
+            "generated": 1000,
+            "completed": 1000,
+            "base_completed": 1000,
+            "inside": 0,
+            "external": 0,
+            "unfinished": 0,
+            "total_wait_veh_h": 26.240756718514483,
+            "external_wait_veh_h": 0,
+            "spillback_link_min": 0.4666666666666667,
+            "waiting": 0,
+            "conservation_error": 0,
+            "throughput_veh_h": 40
+          },
+          {
+            "t": 90000,
+            "boundary_in": 371,
+            "boundary_out": 382,
+            "generated": 1000,
+            "completed": 1000,
+            "base_completed": 1000,
+            "inside": 0,
+            "external": 0,
+            "unfinished": 0,
+            "total_wait_veh_h": 27.845729194664745,
+            "external_wait_veh_h": 0,
+            "spillback_link_min": 1.1333333333333333,
+            "waiting": 0,
+            "conservation_error": 0,
+            "throughput_veh_h": 40
+          }
+        ],
+        "peak": 0.9090909090909091
+      }
+    },
+    {
+      "name": "arterial: boundary counters match actual admissions and completions",
+      "passed": true
+    },
+    {
+      "name": "arterial: visible vehicle positions stay inside region",
+      "passed": true
+    },
+    {
+      "name": "arterial: drawn road is used in local simulation",
+      "passed": true,
+      "detail": {
+        "usingNewRoad": 129
+      }
+    }
+  ],
+  "cases": [
+    {
+      "detail": "no-small",
+      "options": {
+        "daily": 1000,
+        "motoShare": 0.8,
+        "seed": 42,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          5,
+          9,
+          8,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          8,
+          10,
+          8,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "populationWeighted": true,
+        "simulateVisibleOnly": true,
+        "scenario": "S0",
+        "induction": 0,
+        "areaBBox": [
+          105.8,
+          21.01,
+          105.84,
+          21.04
+        ],
+        "roadDetail": "no-small"
+      },
+      "sourceFingerprint": "5bfa4250",
+      "scope": {
+        "filtered": true,
+        "detail": "no-small",
+        "area": [
+          105.8,
+          21.01,
+          105.84,
+          21.04
+        ],
+        "areaStats": {
+          "km2": 13.880919741607908,
+          "originPortals": 41,
+          "destinationPortals": 41,
+          "boundaryOrigins": 16,
+          "boundaryDestinations": 16,
+          "coreNodes": 823,
+          "populationCells": 221,
+          "minTripMeters": 799.7842267987807
+        },
+        "boundaryAliases": [
+          0,
+          0
+        ],
+        "linkCounts": [
+          1465,
+          1482
+        ],
+        "removedLinkCounts": [
+          139253,
+          139257
+        ],
+        "projection": {
+          "assignments": [],
+          "remappedPortals": 0,
+          "maxShiftMeters": 0,
+          "meanShiftMeters": 0
+        }
+      },
+      "metrics": [
+        {
+          "t": 90000,
+          "boundary_in": 391,
+          "boundary_out": 412,
+          "generated": 1000,
+          "completed": 1000,
+          "base_completed": 1000,
+          "inside": 0,
+          "external": 0,
+          "unfinished": 0,
+          "total_wait_veh_h": 25.823421913342294,
+          "external_wait_veh_h": 0,
+          "spillback_link_min": 0.13333333333333333,
+          "waiting": 0,
+          "conservation_error": 0,
+          "throughput_veh_h": 40
+        },
+        {
+          "t": 90000,
+          "boundary_in": 391,
+          "boundary_out": 412,
+          "generated": 1000,
+          "completed": 1000,
+          "base_completed": 1000,
+          "inside": 0,
+          "external": 0,
+          "unfinished": 0,
+          "total_wait_veh_h": 26.751309228302496,
+          "external_wait_veh_h": 0,
+          "spillback_link_min": 0.2,
+          "waiting": 0,
+          "conservation_error": 0,
+          "throughput_veh_h": 40
+        }
+      ],
+      "design": {
+        "lines": [
+          {
+            "id": "L1",
+            "kind": "road",
+            "lanes": 2,
+            "points": [
+              {
+                "ll": [
+                  105.803818,
+                  21.026045
+                ],
+                "ref": "base:112426"
+              },
+              {
+                "ll": [
+                  105.8120598,
+                  21.0248716
+                ],
+                "ref": "base:140455"
+              }
+            ]
+          }
+        ],
+        "bbox": [
+          105.74,
+          20.94,
+          106,
+          21.19
+        ],
+        "autoConnect": true
+      },
+      "usingNewRoad": 118
+    },
+    {
+      "detail": "arterial",
+      "options": {
+        "daily": 1000,
+        "motoShare": 0.8,
+        "seed": 42,
+        "profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          5,
+          9,
+          8,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          8,
+          10,
+          8,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "populationWeighted": true,
+        "simulateVisibleOnly": true,
+        "scenario": "S0",
+        "induction": 0,
+        "areaBBox": [
+          105.8,
+          21.01,
+          105.84,
+          21.04
+        ],
+        "roadDetail": "arterial"
+      },
+      "sourceFingerprint": "afeffaf0",
+      "scope": {
+        "filtered": true,
+        "detail": "arterial",
+        "area": [
+          105.8,
+          21.01,
+          105.84,
+          21.04
+        ],
+        "areaStats": {
+          "km2": 13.880919741607908,
+          "originPortals": 40,
+          "destinationPortals": 39,
+          "boundaryOrigins": 15,
+          "boundaryDestinations": 14,
+          "coreNodes": 650,
+          "populationCells": 221,
+          "minTripMeters": 799.7842267987807
+        },
+        "boundaryAliases": [
+          0,
+          0
+        ],
+        "linkCounts": [
+          1066,
+          1083
+        ],
+        "removedLinkCounts": [
+          139652,
+          139656
+        ],
+        "projection": {
+          "assignments": [],
+          "remappedPortals": 0,
+          "maxShiftMeters": 0,
+          "meanShiftMeters": 0
+        }
+      },
+      "metrics": [
+        {
+          "t": 90000,
+          "boundary_in": 371,
+          "boundary_out": 382,
+          "generated": 1000,
+          "completed": 1000,
+          "base_completed": 1000,
+          "inside": 0,
+          "external": 0,
+          "unfinished": 0,
+          "total_wait_veh_h": 26.240756718514483,
+          "external_wait_veh_h": 0,
+          "spillback_link_min": 0.4666666666666667,
+          "waiting": 0,
+          "conservation_error": 0,
+          "throughput_veh_h": 40
+        },
+        {
+          "t": 90000,
+          "boundary_in": 371,
+          "boundary_out": 382,
+          "generated": 1000,
+          "completed": 1000,
+          "base_completed": 1000,
+          "inside": 0,
+          "external": 0,
+          "unfinished": 0,
+          "total_wait_veh_h": 27.845729194664745,
+          "external_wait_veh_h": 0,
+          "spillback_link_min": 1.1333333333333333,
+          "waiting": 0,
+          "conservation_error": 0,
+          "throughput_veh_h": 40
+        }
+      ],
+      "design": {
+        "lines": [
+          {
+            "id": "L1",
+            "kind": "road",
+            "lanes": 2,
+            "points": [
+              {
+                "ll": [
+                  105.803818,
+                  21.026045
+                ],
+                "ref": "base:112426"
+              },
+              {
+                "ll": [
+                  105.8120598,
+                  21.0248716
+                ],
+                "ref": "base:140455"
+              }
+            ]
+          }
+        ],
+        "bbox": [
+          105.74,
+          20.94,
+          106,
+          21.19
+        ],
+        "autoConnect": true
+      },
+      "usingNewRoad": 129
+    }
+  ]
+}
